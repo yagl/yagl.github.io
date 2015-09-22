@@ -1,0 +1,15 @@
+{
+  "name": "yammo-website",
+  "version": "0.0.1",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "scripts": {
+    "predeploy": "git submodule foreach git pull origin master",
+    "deploy": "dir"
+  },
+  "dependencies": {
+    "gulp-shell": "^0.4.3",
+    "yuidoc-lucid-theme": "^0.1.1"
+  }
+}

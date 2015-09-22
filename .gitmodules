@@ -1,0 +1,3 @@
+[submodule "yammo-ecs"]
+	path = yammo-ecs
+	url = https://github.com/yammo/ecs.git

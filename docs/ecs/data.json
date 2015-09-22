@@ -1,0 +1,374 @@
+{
+    "project": {},
+    "files": {
+        "yammo-ecs\\src\\Entity.js": {
+            "name": "yammo-ecs\\src\\Entity.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "yammo-ecs\\src\\System.js": {
+            "name": "yammo-ecs\\src\\System.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "yammo-ecs\\src\\ecs.js": {
+            "name": "yammo-ecs\\src\\ecs.js",
+            "modules": {
+                "ecs": 1
+            },
+            "classes": {
+                "ECS": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "yammo-ecs\\src\\uid.js": {
+            "name": "yammo-ecs\\src\\uid.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "ecs": {
+            "name": "ecs",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "ECS": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 11,
+            "description": "Entity Component System module"
+        }
+    },
+    "classes": {
+        "ECS": {
+            "name": "ECS",
+            "shortname": "ECS",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ecs",
+            "namespace": "",
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 11,
+            "is_constructor": 1
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "yammo-ecs\\src\\Entity.js",
+            "line": 7,
+            "description": "unique identifier of the entity",
+            "type": "{Number}",
+            "class": "ECS"
+        },
+        {
+            "file": "yammo-ecs\\src\\Entity.js",
+            "line": 28,
+            "description": "Systems applied each update to the entity",
+            "type": "{Array[System]}",
+            "class": "ECS"
+        },
+        {
+            "file": "yammo-ecs\\src\\Entity.js",
+            "line": 34,
+            "description": "if true the systems are computed again at the beginning of the next ecs tick",
+            "type": "{Boolean}",
+            "class": "ECS"
+        },
+        {
+            "file": "yammo-ecs\\src\\Entity.js",
+            "line": 40,
+            "description": "components of the entity",
+            "type": "{Object|Number|String}",
+            "class": "ECS"
+        },
+        {
+            "file": "yammo-ecs\\src\\Entity.js",
+            "line": 46,
+            "description": "a reference to parent ECS class",
+            "type": "{ECS}",
+            "class": "ECS"
+        },
+        {
+            "file": "yammo-ecs\\src\\System.js",
+            "line": 30,
+            "description": "returns true if the entity should be processed by the current system",
+            "params": [
+                {
+                    "name": "entity",
+                    "description": "the entity to test",
+                    "type": "Entity"
+                }
+            ],
+            "class": "ECS"
+        },
+        {
+            "file": "yammo-ecs\\src\\System.js",
+            "line": 37,
+            "description": "called when an entity is added to the system",
+            "params": [
+                {
+                    "name": "entity",
+                    "description": "the added entity",
+                    "type": "Entity"
+                }
+            ],
+            "class": "ECS"
+        },
+        {
+            "file": "yammo-ecs\\src\\System.js",
+            "line": 42,
+            "description": "called when an entity is removed from the system",
+            "params": [
+                {
+                    "name": "entity",
+                    "description": "the removed entity",
+                    "type": "Entity"
+                }
+            ],
+            "class": "ECS"
+        },
+        {
+            "file": "yammo-ecs\\src\\System.js",
+            "line": 47,
+            "description": "called for each entity to update",
+            "params": [
+                {
+                    "name": "entity",
+                    "description": "the entity to update",
+                    "type": "Entity"
+                }
+            ],
+            "class": "ECS"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 16,
+            "description": "Store all entities of the ECS.",
+            "itemtype": "property",
+            "name": "entities",
+            "type": "{Array}",
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 24,
+            "description": "Store entities which need to be tested at beginning of next tick.",
+            "itemtype": "property",
+            "name": "entitiesSystemsDirty",
+            "type": "{Array}",
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 32,
+            "description": "Store all systems of the ECS.",
+            "itemtype": "property",
+            "name": "systems",
+            "type": "{Array}",
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 40,
+            "description": "Count how many updates have been done.",
+            "itemtype": "property",
+            "name": "updateCounter",
+            "type": "{Number}",
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 48,
+            "description": "Add an entity to the ecs.",
+            "itemtype": "method",
+            "name": "addEntity",
+            "params": [
+                {
+                    "name": "entity",
+                    "description": "The entity to add.",
+                    "type": "Entity"
+                }
+            ],
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 58,
+            "description": "Remove an entity from the ecs by reference.",
+            "itemtype": "method",
+            "name": "removeEntity",
+            "params": [
+                {
+                    "name": "entity",
+                    "description": "reference of the entity to remove",
+                    "type": "Entity"
+                }
+            ],
+            "return": {
+                "description": "the remove entity if any",
+                "type": "Entity"
+            },
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 80,
+            "description": "Remove an entity from the ecs by entity id.",
+            "itemtype": "method",
+            "name": "removeEntityById",
+            "params": [
+                {
+                    "name": "entityId",
+                    "description": "id of the entity to remove",
+                    "type": "Entity"
+                }
+            ],
+            "return": {
+                "description": "removed entity if any",
+                "type": "Entity"
+            },
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 98,
+            "description": "Remove an entity from dirty entities by reference.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "removeEntityIfDirty",
+            "params": [
+                {
+                    "name": "entity",
+                    "description": "entity to remove",
+                    "type": "[type]"
+                }
+            ],
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 112,
+            "description": "Add a system to the ecs.",
+            "itemtype": "method",
+            "name": "addSystem",
+            "params": [
+                {
+                    "name": "system",
+                    "description": "system to add",
+                    "type": "System"
+                }
+            ],
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 121,
+            "description": "Remove a system from the ecs.",
+            "itemtype": "method",
+            "name": "removeSystem",
+            "params": [
+                {
+                    "name": "system",
+                    "description": "system reference",
+                    "type": "System"
+                }
+            ],
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 134,
+            "description": "\"Clean\" entities flagged as dirty by removing unecessary systems and\nadding missing systems.",
+            "access": "private",
+            "tagname": "",
+            "itemtype": "method",
+            "name": "cleanDirtyEntities",
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\ecs.js",
+            "line": 163,
+            "description": "Update the ecs.",
+            "itemtype": "method",
+            "name": "update",
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yammo-ecs\\src\\uid.js",
+            "line": 1,
+            "description": "UIDGenerator for multi-instance Entity Component System\nGenerate numeric unique ids for ECS entities. The requirements are:\n * generate Numbers for fast comparaison, low storage and bandwidth usage\n * generators can be salted so you can use multiple generators with \n uniqueness guaranty\n * each salted generator can generate reasonable amount of unique ids",
+            "class": "",
+            "module": "ecs"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nunique identifier of the entity",
+            "line": " yammo-ecs\\src\\Entity.js:7"
+        },
+        {
+            "message": "Missing item type\nSystems applied each update to the entity",
+            "line": " yammo-ecs\\src\\Entity.js:28"
+        },
+        {
+            "message": "Missing item type\nif true the systems are computed again at the beginning of the next ecs tick",
+            "line": " yammo-ecs\\src\\Entity.js:34"
+        },
+        {
+            "message": "Missing item type\ncomponents of the entity",
+            "line": " yammo-ecs\\src\\Entity.js:40"
+        },
+        {
+            "message": "Missing item type\na reference to parent ECS class",
+            "line": " yammo-ecs\\src\\Entity.js:46"
+        },
+        {
+            "message": "Missing item type\nreturns true if the entity should be processed by the current system",
+            "line": " yammo-ecs\\src\\System.js:30"
+        },
+        {
+            "message": "Missing item type\ncalled when an entity is added to the system",
+            "line": " yammo-ecs\\src\\System.js:37"
+        },
+        {
+            "message": "Missing item type\ncalled when an entity is removed from the system",
+            "line": " yammo-ecs\\src\\System.js:42"
+        },
+        {
+            "message": "Missing item type\ncalled for each entity to update",
+            "line": " yammo-ecs\\src\\System.js:47"
+        },
+        {
+            "message": "Missing item type\nUIDGenerator for multi-instance Entity Component System\nGenerate numeric unique ids for ECS entities. The requirements are:\n * generate Numbers for fast comparaison, low storage and bandwidth usage\n * generators can be salted so you can use multiple generators with \n uniqueness guaranty\n * each salted generator can generate reasonable amount of unique ids",
+            "line": " yammo-ecs\\src\\uid.js:1"
+        }
+    ]
+}

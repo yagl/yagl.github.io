@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ECS</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/ECS.html">ECS</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                                <li><a href="../modules/ecs.html">ecs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>ECS Class</h1>
+<div class="box meta">
+
+
+        <div class="foundat">
+            Defined in: <a href="../files/yammo-ecs_src_ecs.js.html#l11"><code>yammo-ecs\src\ecs.js:11</code></a>
+        </div>
+
+            Module: <a href="../modules/ecs.html">ecs</a>
+
+</div>
+
+
+<div class="box intro">
+    
+</div>
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+<div id="method_ECS" class="method item">
+    <h3 class="name"><code>ECS</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l11"><code>yammo-ecs\src\ecs.js:11</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+
+
+
+</div>
+    </div>
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_addEntity">addEntity</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_addSystem">addSystem</a>
+
+                            </li>
+                            <li class="index-item method private">
+                                <a href="#method_cleanDirtyEntities">cleanDirtyEntities</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_removeEntity">removeEntity</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_removeEntityById">removeEntityById</a>
+
+                            </li>
+                            <li class="index-item method private">
+                                <a href="#method_removeEntityIfDirty">removeEntityIfDirty</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_removeSystem">removeSystem</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_update">update</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties">
+                            <li class="index-item property">
+                                <a href="#property_entities">entities</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_entitiesSystemsDirty">entitiesSystemsDirty</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_systems">systems</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_updateCounter">updateCounter</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_addEntity" class="method item">
+    <h3 class="name"><code>addEntity</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>entity</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l48"><code>yammo-ecs\src\ecs.js:48</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Add an entity to the ecs.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">entity</code>
+                        <span class="type">Entity</span>
+
+
+                    <div class="param-description">
+                        <p>The entity to add.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_addSystem" class="method item">
+    <h3 class="name"><code>addSystem</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>system</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l112"><code>yammo-ecs\src\ecs.js:112</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Add a system to the ecs.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">system</code>
+                        <span class="type">System</span>
+
+
+                    <div class="param-description">
+                        <p>system to add</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_cleanDirtyEntities" class="method item private">
+    <h3 class="name"><code>cleanDirtyEntities</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l134"><code>yammo-ecs\src\ecs.js:134</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>&quot;Clean&quot; entities flagged as dirty by removing unecessary systems and
+adding missing systems.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_removeEntity" class="method item">
+    <h3 class="name"><code>removeEntity</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>entity</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Entity</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l58"><code>yammo-ecs\src\ecs.js:58</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Remove an entity from the ecs by reference.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">entity</code>
+                        <span class="type">Entity</span>
+
+
+                    <div class="param-description">
+                        <p>reference of the entity to remove</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Entity</span>:
+                    <p>the remove entity if any</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_removeEntityById" class="method item">
+    <h3 class="name"><code>removeEntityById</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>entityId</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Entity</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l80"><code>yammo-ecs\src\ecs.js:80</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Remove an entity from the ecs by entity id.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">entityId</code>
+                        <span class="type">Entity</span>
+
+
+                    <div class="param-description">
+                        <p>id of the entity to remove</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Entity</span>:
+                    <p>removed entity if any</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_removeEntityIfDirty" class="method item private">
+    <h3 class="name"><code>removeEntityIfDirty</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>entity</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+        <span class="flag private">private</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l98"><code>yammo-ecs\src\ecs.js:98</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Remove an entity from dirty entities by reference.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">entity</code>
+                        <span class="type">type</span>
+
+
+                    <div class="param-description">
+                        <p>entity to remove</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_removeSystem" class="method item">
+    <h3 class="name"><code>removeSystem</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>system</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l121"><code>yammo-ecs\src\ecs.js:121</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Remove a system from the ecs.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">system</code>
+                        <span class="type">System</span>
+
+
+                    <div class="param-description">
+                        <p>system reference</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_update" class="method item">
+    <h3 class="name"><code>update</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l163"><code>yammo-ecs\src\ecs.js:163</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Update the ecs.</p>
+
+    </div>
+
+
+
+
+</div>
+            </div>
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+<div id="property_entities" class="property item">
+    <h3 class="name"><code>entities</code></h3>
+    <span class="type">Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l16"><code>yammo-ecs\src\ecs.js:16</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Store all entities of the ECS.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_entitiesSystemsDirty" class="property item">
+    <h3 class="name"><code>entitiesSystemsDirty</code></h3>
+    <span class="type">Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l24"><code>yammo-ecs\src\ecs.js:24</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Store entities which need to be tested at beginning of next tick.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_systems" class="property item">
+    <h3 class="name"><code>systems</code></h3>
+    <span class="type">Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l32"><code>yammo-ecs\src\ecs.js:32</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Store all systems of the ECS.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_updateCounter" class="property item">
+    <h3 class="name"><code>updateCounter</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yammo-ecs_src_ecs.js.html#l40"><code>yammo-ecs\src\ecs.js:40</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Count how many updates have been done.</p>
+
+    </div>
+
+
+
+</div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
