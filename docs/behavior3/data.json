@@ -1,27 +1,6 @@
 {
     "project": {},
     "files": {
-        "yagl-behavior3\\dist\\blackboard.js": {
-            "name": "yagl-behavior3\\dist\\blackboard.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "yagl-behavior3\\dist\\tree.js": {
-            "name": "yagl-behavior3\\dist\\tree.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "yagl-behavior3\\dist\\utils.js": {
-            "name": "yagl-behavior3\\dist\\utils.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
         "yagl-behavior3\\lib\\blackboard.js": {
             "name": "yagl-behavior3\\lib\\blackboard.js",
             "modules": {},
@@ -71,6 +50,21 @@
         }
     },
     "modules": {
+        "behavior3": {
+            "name": "behavior3",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Behavior3": 1,
+                "Tick": 1,
+                "BehaviorTree": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "yagl-behavior3\\lib\\tree.js",
+            "line": 14
+        },
         "utils": {
             "name": "utils",
             "submodules": {},
@@ -83,57 +77,9 @@
             "tag": "module",
             "file": "yagl-behavior3\\lib\\utils.js",
             "line": 6
-        },
-        "behavior3": {
-            "name": "behavior3",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "BehaviorTree": 1,
-                "Behavior3": 1,
-                "Tick": 1
-            },
-            "fors": {},
-            "namespaces": {},
-            "tag": "module",
-            "file": "yagl-behavior3\\lib\\tick.js",
-            "line": 11
         }
     },
     "classes": {
-        "BehaviorTree": {
-            "name": "BehaviorTree",
-            "shortname": "BehaviorTree",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "behavior3",
-            "file": "yagl-behavior3\\lib\\tree.js",
-            "line": 14,
-            "description": "A behavior tree.",
-            "is_constructor": 1
-        },
-        "Utils": {
-            "name": "Utils",
-            "shortname": "Utils",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "utils",
-            "namespace": "",
-            "file": "yagl-behavior3\\lib\\utils.js",
-            "line": 6,
-            "description": "Generate unique Number sequentially.",
-            "itemtype": "method",
-            "return": {
-                "description": "A unique Number.",
-                "type": "Number"
-            }
-        },
         "Behavior3": {
             "name": "Behavior3",
             "shortname": "Behavior3",
@@ -179,63 +125,55 @@
                     "type": "Blackboard"
                 }
             ]
+        },
+        "BehaviorTree": {
+            "name": "BehaviorTree",
+            "shortname": "BehaviorTree",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "behavior3",
+            "namespace": "",
+            "file": "yagl-behavior3\\lib\\tree.js",
+            "line": 14,
+            "description": "A behavior tree.",
+            "is_constructor": 1
+        },
+        "Utils": {
+            "name": "Utils",
+            "shortname": "Utils",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "utils",
+            "namespace": "",
+            "file": "yagl-behavior3\\lib\\utils.js",
+            "line": 6,
+            "description": "Generate unique Number sequentially.",
+            "itemtype": "method",
+            "return": {
+                "description": "A unique Number.",
+                "type": "Number"
+            }
         }
     },
     "elements": {},
     "classitems": [
         {
-            "file": "yagl-behavior3\\dist\\blackboard.js",
-            "line": 2,
-            "description": "Blackboard - the memory structure for bt/nodes. Allow to store:\n- global information\n- per-tree information\n- per-tree and per-node information",
-            "class": "BehaviorTree"
-        },
-        {
-            "file": "yagl-behavior3\\dist\\blackboard.js",
-            "line": 26,
-            "description": "returns memory Map for given tree",
-            "class": "BehaviorTree"
-        },
-        {
-            "file": "yagl-behavior3\\dist\\tree.js",
-            "line": 1,
-            "description": "module ecs",
-            "class": "BehaviorTree"
-        },
-        {
-            "file": "yagl-behavior3\\dist\\tree.js",
-            "line": 42,
-            "description": "Update the behavior tree.",
-            "params": [
-                {
-                    "name": "target",
-                    "description": "[description]",
-                    "type": "[type]"
-                },
-                {
-                    "name": "blackboard",
-                    "description": "[description]",
-                    "type": "[type]"
-                }
-            ],
-            "return": {
-                "description": "[description]",
-                "type": "[type]"
-            },
-            "class": "BehaviorTree"
-        },
-        {
             "file": "yagl-behavior3\\lib\\blackboard.js",
             "line": 2,
             "description": "Blackboard - the memory structure for bt/nodes. Allow to store:\n- global information\n- per-tree information\n- per-tree and per-node information",
-            "class": "Behavior3",
-            "module": "utils"
+            "class": "Behavior3"
         },
         {
             "file": "yagl-behavior3\\lib\\blackboard.js",
             "line": 13,
             "description": "returns memory Map for given tree",
-            "class": "Behavior3",
-            "module": "utils"
+            "class": "Behavior3"
         },
         {
             "file": "yagl-behavior3\\lib\\index.js",
@@ -407,22 +345,6 @@
         }
     ],
     "warnings": [
-        {
-            "message": "Missing item type\nBlackboard - the memory structure for bt/nodes. Allow to store:\n- global information\n- per-tree information\n- per-tree and per-node information",
-            "line": " yagl-behavior3\\dist\\blackboard.js:2"
-        },
-        {
-            "message": "Missing item type\nreturns memory Map for given tree",
-            "line": " yagl-behavior3\\dist\\blackboard.js:26"
-        },
-        {
-            "message": "Missing item type\nmodule ecs",
-            "line": " yagl-behavior3\\dist\\tree.js:1"
-        },
-        {
-            "message": "Missing item type\nUpdate the behavior tree.",
-            "line": " yagl-behavior3\\dist\\tree.js:42"
-        },
         {
             "message": "Missing item type\nBlackboard - the memory structure for bt/nodes. Allow to store:\n- global information\n- per-tree information\n- per-tree and per-node information",
             "line": " yagl-behavior3\\lib\\blackboard.js:2"

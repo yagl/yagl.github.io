@@ -1,0 +1,144 @@
+{
+    "project": {},
+    "files": {
+        "yagl-tiledmap\\src\\autotile.js": {
+            "name": "yagl-tiledmap\\src\\autotile.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "yagl-tiledmap\\src\\map.js": {
+            "name": "yagl-tiledmap\\src\\map.js",
+            "modules": {
+                "tiledmap": 1
+            },
+            "classes": {
+                "TiledMap": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "tiledmap": {
+            "name": "tiledmap",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "TiledMap": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "yagl-tiledmap\\src\\map.js",
+            "line": 5
+        }
+    },
+    "classes": {
+        "TiledMap": {
+            "name": "TiledMap",
+            "shortname": "TiledMap",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "tiledmap",
+            "namespace": "",
+            "file": "yagl-tiledmap\\src\\map.js",
+            "line": 5,
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "sizeX",
+                    "description": "Number of horizontal tiles.",
+                    "type": "Number"
+                },
+                {
+                    "name": "sizeY",
+                    "description": "Number of vertical tiles.",
+                    "type": "Number"
+                },
+                {
+                    "name": "tileWidth",
+                    "description": "Width/Height of a signle tile.",
+                    "type": "Number"
+                }
+            ]
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "yagl-tiledmap\\src\\autotile.js",
+            "line": 1,
+            "description": "glossary:\n- tile: a tile which can be drawn on the map\n- tileset: a collection of tiles in a single image\n- autotile: a small collection of tiles in a single image, these tiles are\n  auto-transitioning. the autotile image must follow the given pattern to\n  render properly: http://i.imgur.com/fDc7IdL.png\n\ncompile an autotile for use in a tiledmap. since a tile is represented by\na signed integer in memory and we can have multiple autotiles, we need to\nstore multiple information:\n- a tile can be from tileset or from one of the autotile\n- an autotile tile needs to know which autotile it refers to\n- an autotile tile needs to store how it is oriented, where are corners\n  and plain textures\n\nsince positive index are already used for the tileset and we use an array of\nintegers to store an entire map layer, we use negative indexes for\nautotiles. order of the autotiles is VERY IMPORTANT since the negative index\nstores both the autotile index and the autotile type itself\n\ntherefore, a layer data array will follow the rules below:\n\n| Range        | Description                                                        |\n|--------------|--------------------------------------------------------------------|\n| 1 to MAX_INT | index of a tileset tile                                            |\n| 0            | empty tile                                                         |\n| -1 to -255   | index of an autotile tile which belongs to the first map autotile  |\n| -256 to -511 | index of an autotile tile which belongs to the second map autotile |\n\nin words:\n- a positive index corresponds to a tile from the tileset\n- a null/zero index corresponds to an empty/transparent tile\n- a negative index corresponds to a tile from an autotile",
+            "class": "TiledMap"
+        },
+        {
+            "file": "yagl-tiledmap\\src\\autotile.js",
+            "line": 87,
+            "description": "give the position of a couple tile type/corner on the\ntileset image",
+            "params": [
+                {
+                    "name": "corner",
+                    "description": "the type of corner",
+                    "type": "*"
+                },
+                {
+                    "name": "tile",
+                    "description": "the type of tile",
+                    "type": "Tile"
+                }
+            ],
+            "class": "TiledMap"
+        },
+        {
+            "file": "yagl-tiledmap\\src\\autotile.js",
+            "line": 342,
+            "description": "return the id of a tile if in limits, null otherwise",
+            "params": [
+                {
+                    "name": "x",
+                    "description": ""
+                },
+                {
+                    "name": "y",
+                    "description": ""
+                },
+                {
+                    "name": "layer",
+                    "description": ""
+                },
+                {
+                    "name": "size",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "TiledMap"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " yagl-tiledmap\\src\\autotile.js:342"
+        },
+        {
+            "message": "Missing item type\nglossary:\n- tile: a tile which can be drawn on the map\n- tileset: a collection of tiles in a single image\n- autotile: a small collection of tiles in a single image, these tiles are\n  auto-transitioning. the autotile image must follow the given pattern to\n  render properly: http://i.imgur.com/fDc7IdL.png\n\ncompile an autotile for use in a tiledmap. since a tile is represented by\na signed integer in memory and we can have multiple autotiles, we need to\nstore multiple information:\n- a tile can be from tileset or from one of the autotile\n- an autotile tile needs to know which autotile it refers to\n- an autotile tile needs to store how it is oriented, where are corners\n  and plain textures\n\nsince positive index are already used for the tileset and we use an array of\nintegers to store an entire map layer, we use negative indexes for\nautotiles. order of the autotiles is VERY IMPORTANT since the negative index\nstores both the autotile index and the autotile type itself\n\ntherefore, a layer data array will follow the rules below:\n\n| Range        | Description                                                        |\n|--------------|--------------------------------------------------------------------|\n| 1 to MAX_INT | index of a tileset tile                                            |\n| 0            | empty tile                                                         |\n| -1 to -255   | index of an autotile tile which belongs to the first map autotile  |\n| -256 to -511 | index of an autotile tile which belongs to the second map autotile |\n\nin words:\n- a positive index corresponds to a tile from the tileset\n- a null/zero index corresponds to an empty/transparent tile\n- a negative index corresponds to a tile from an autotile",
+            "line": " yagl-tiledmap\\src\\autotile.js:1"
+        },
+        {
+            "message": "Missing item type\ngive the position of a couple tile type/corner on the\ntileset image",
+            "line": " yagl-tiledmap\\src\\autotile.js:87"
+        },
+        {
+            "message": "Missing item type\nreturn the id of a tile if in limits, null otherwise",
+            "line": " yagl-tiledmap\\src\\autotile.js:342"
+        }
+    ]
+}

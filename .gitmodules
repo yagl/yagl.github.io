@@ -4,3 +4,6 @@
 [submodule "yagl-ecs"]
 	path = yagl-ecs
 	url = https://github.com/yagl/ecs.git
+[submodule "yagl-tiledmap"]
+	path = yagl-tiledmap
+	url = https://github.com/yagl/tiledmap.git
