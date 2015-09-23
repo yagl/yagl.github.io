@@ -5,8 +5,8 @@
     "gulp": "^3.9.0"
   },
   "scripts": {
-    "predeploy": "git submodule foreach git pull origin master",
-    "deploy": "dir"
+    "prebuild": "git submodule foreach git pull origin master",
+    "build": "gulp"
   },
   "dependencies": {
     "gulp-shell": "^0.4.3",

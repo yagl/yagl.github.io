@@ -1,6 +1,116 @@
-<p>Yammo Projects</p>
-<ul>
-    <li>
-        <a href="/docs/ecs">ECS</a>
-    </li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <style>
+      html, body {
+        height: 100%;
+      }
+      body {
+        font-family: 'Roboto Mono';
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Ubuntu';
+
+      }
+      .site-main {
+        min-height: 300px;
+        background: linear-gradient(135deg,#004D40,#00695C,#00796B);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .page-wrap {
+        min-height: 100%;
+        /* equal to footer height */
+        margin-bottom: -142px; 
+      }
+      .page-wrap:after {
+        content: "";
+        display: block;
+      }
+      .site-footer, .page-wrap:after {
+        height: 142px; 
+      }
+      .site-footer {
+        background: #f7f7f7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrap">
+      <div class="site-main">
+        <h1>
+          yagl.
+        </h1>
+        <p class="title-caption">
+            <b>Y</b>et <b>A</b>nother <b>G</b>ame <b>L</b>ibrary
+          </p>
+      </div>
+      <div class="container">
+        <br/>
+        <p>
+          <b>Yagl</b> is a set of game-oriented librairies that I have created
+          during the development of my own project.
+        </p>
+        <p>
+          This is still much a work in progress so if you encounter issues
+          do not hesite to report through github.
+        </p>
+        <br/>
+        <div class="card-deck-wrapper">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">ECS</h4>
+                <p class="card-text">An entity component system implementation in ES6.</p>
+                <p class="card-text">
+                  <a href="/docs/ecs">
+                    <i class="fa fa-book"></i>
+                  </a>
+                  &nbsp;
+                  <a href="https://github.com/yagl">
+                    <i class="fa fa-github"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">Card title</h4>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <br/>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <br/>
+        Github
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+  </body>
+</html>

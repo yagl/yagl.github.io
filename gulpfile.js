@@ -13,4 +13,5 @@ gulp.task('ecs-doc', shell.task([
   'yuidoc -o docs/ecs yammo-ecs'
 ]));
 
+gulp.task('default', ['ecs-doc']);
 //console.log('ooooooooooooooooooka')
