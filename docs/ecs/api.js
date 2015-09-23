@@ -1,16 +1,24 @@
 YUI.add("yuidoc-meta", function(Y) {
    Y.YUIDoc = { meta: {
     "classes": [
-        "ECS"
+        "ECS",
+        "Entity",
+        "System",
+        "UID",
+        "UIDGenerator"
     ],
     "modules": [
-        "ecs"
+        "ecs",
+        "uid"
     ],
     "allModules": [
         {
             "displayName": "ecs",
-            "name": "ecs",
-            "description": "Entity Component System module"
+            "name": "ecs"
+        },
+        {
+            "displayName": "uid",
+            "name": "uid"
         }
     ],
     "elements": []

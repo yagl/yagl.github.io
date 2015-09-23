@@ -9,9 +9,10 @@ try {
   fs.mkdir('docs');
 }
 
-gulp.task('ecs-doc', shell.task([
-  'yuidoc -o docs/ecs yammo-ecs'
+gulp.task('docs', shell.task([
+  'yuidoc -o docs/ecs yagl-ecs/src -t node_modules/yuidoc-lucid-theme -H node_modules/yuidoc-lucid-theme/helpers/helpers.js',
+  'yuidoc -o docs/behavior3 yagl-behavior3/src -t node_modules/yuidoc-lucid-theme -H node_modules/yuidoc-lucid-theme/helpers/helpers.js'
 ]));
 
-gulp.task('default', ['ecs-doc']);
+gulp.task('default', ['docs']);
 //console.log('ooooooooooooooooooka')

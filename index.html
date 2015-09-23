@@ -43,6 +43,10 @@
       .site-footer {
         background: #f7f7f7;
       }
+      .card i.fa {
+        font-size: 24px;
+        color: #00695C;
+      }
     </style>
   </head>
   <body>
@@ -59,11 +63,14 @@
         <br/>
         <p>
           <b>Yagl</b> is a set of game-oriented librairies that I have created
-          during the development of my own project.
+          during the development of my own project, a browser based multiplayer
+          game. The libraries are independant
+          from each other, highly flexible and customizable and built with speed
+          in mind.
         </p>
         <p>
-          This is still much a work in progress so if you encounter issues
-          do not hesite to report through github.
+          This is still much a work in progress so these modules should not be
+          considered stable.
         </p>
         <br/>
         <div class="card-deck-wrapper">
@@ -71,8 +78,12 @@
             <div class="card">
               <div class="card-block">
                 <h4 class="card-title">ECS</h4>
-                <p class="card-text">An entity component system implementation in ES6.</p>
                 <p class="card-text">
+                  An entity component system implementation in ES6, an architectural
+                  pattern that follows composition over inheritance and allow great
+                  flexibility in defining entity behaviors.
+                </p>
+                <p class="card-text text-right">
                   <a href="/docs/ecs">
                     <i class="fa fa-book"></i>
                   </a>
@@ -85,16 +96,49 @@
             </div>
             <div class="card">
               <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h4 class="card-title">Observer</h4>
+                <p class="card-text">
+                  Event emitter in ES6 built with speed in mind. Allow to make every object or function
+                  observable, and can be subclassed in ES6.
+                </p>
               </div>
             </div>
             <div class="card">
               <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h4 class="card-title">Behavior3</h4>
+                <p class="card-text">
+                  A behavior tree implementation in ES6. Define complex behaviors as a tree of 
+                  actions and conditions. Leverage the power of decorators and composites nodes
+                  to create smart behaviors for your entities with ease.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div class="card-deck-wrapper">
+          <div class="card-deck">
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">Math2D</h4>
+                <p class="card-text">
+                  A set of common utility functions when working in 2D. 
+                  This include some geometry with basic shapes.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">Redstone</h4>
+                <p class="card-text">A websocket wrapper that allow to use JSON (fast prototyping) or Binary (need to provide binarify/parse methods but maximum efficiency) for messages.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-block">
+                <h4 class="card-title">TiledMap</h4>
+                <p class="card-text">
+                  Render tiled maps on canvas, support classic tilesets and autotiles.
+                </p>
               </div>
             </div>
           </div>
@@ -107,7 +151,9 @@
     <footer class="site-footer">
       <div class="container">
         <br/>
-        Github
+        Built with <i class="fa fa-heart"></i>
+        <br/>
+        <a href="https://github.com/yagl">Github</a>
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>yagl-behavior3\dist\tree.js</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/lucid.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+            
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b></b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/Behavior3", "classes/BehaviorTree", "classes/Tick", "classes/Utils", "modules/behavior3", "modules/utils"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <div id="sidebar">
+	        <div id="classes">
+	            <ul id="api-classes" class="nav nav-list">
+	                    <li><a href="../classes/Behavior3.html">Behavior3</a></li>
+	                    <li><a href="../classes/BehaviorTree.html">BehaviorTree</a></li>
+	                    <li><a href="../classes/Tick.html">Tick</a></li>
+	                    <li><a href="../classes/Utils.html">Utils</a></li>
+	            </ul>
+	        </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>yagl-behavior3\dist\tree.js <small>File</small></h1>
+                        </div>
+                        
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        /**
+                         * module ecs
+                         */
+                        
+                        &#x27;use strict&#x27;;
+                        
+                        Object.defineProperty(exports, &#x27;__esModule&#x27;, {
+                          value: true
+                        });
+                        
+                        var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+                        
+                        function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+                        
+                        function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+                        
+                        var _utils = require(&#x27;./utils&#x27;);
+                        
+                        var _tick = require(&#x27;./tick&#x27;);
+                        
+                        var _tick2 = _interopRequireDefault(_tick);
+                        
+                        /**
+                         * A behavior tree.
+                         * 
+                         * @class  BehaviorTree
+                         */
+                        
+                        var BehavoirTree = (function () {
+                          /**
+                           * @constructor
+                           * @class  BehaviorTree
+                           */
+                        
+                          function BehavoirTree() {
+                            _classCallCheck(this, BehavoirTree);
+                        
+                            this.id = (0, _utils.createUUID)();
+                            this.root = null;
+                          }
+                        
+                          /**
+                           * Update the behavior tree.
+                           * @param  {[type]} target     [description]
+                           * @param  {[type]} blackboard [description]
+                           * @return {[type]}            [description]
+                           */
+                        
+                          _createClass(BehavoirTree, [{
+                            key: &#x27;tick&#x27;,
+                            value: function tick(target, blackboard) {
+                              var tick = new _tick2[&#x27;default&#x27;](this, target, blackboard);
+                        
+                              this.root.execute(tick);
+                        
+                              var lastOpenNodes = blackboard.get(&#x27;openNodes&#x27;, this.id);
+                              var currOpenNodes = tick.openNodes.slice(0);
+                        
+                              var start = 0;
+                              var max = Math.min(lastOpenNodes.length, currOpenNodes.length);
+                        
+                              // does not close if still open in this tick
+                              for (var i = 0; i &lt; max; i += 1) {
+                                start = i + 1;
+                                if (lastOpenNodes[i] !== currOpenNodes[i]) {
+                                  break;
+                                }
+                              }
+                        
+                              // close the nodes
+                              for (var i = lastOpenNodes.length - 1; i &gt;= start; i -= 1) {
+                                lastOpenNodes[i]._close(tick);
+                              }
+                        
+                              blackboard.set(&#x27;openNodes&#x27;, currOpenNodes, this.id);
+                              blackboard.set(&#x27;nodeCount&#x27;, tick.nodeCount, this.id);
+                            }
+                          }]);
+                        
+                          return BehavoirTree;
+                        })();
+                        
+                        exports[&#x27;default&#x27;] = BehavoirTree;
+                        module.exports = exports[&#x27;default&#x27;];
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+{
+    "project": {},
+    "files": {
+        "yagl-behavior3\\dist\\blackboard.js": {
+            "name": "yagl-behavior3\\dist\\blackboard.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "yagl-behavior3\\dist\\tree.js": {
+            "name": "yagl-behavior3\\dist\\tree.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "yagl-behavior3\\dist\\utils.js": {
+            "name": "yagl-behavior3\\dist\\utils.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "yagl-behavior3\\lib\\blackboard.js": {
+            "name": "yagl-behavior3\\lib\\blackboard.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "yagl-behavior3\\lib\\index.js": {
+            "name": "yagl-behavior3\\lib\\index.js",
+            "modules": {
+                "behavior3": 1
+            },
+            "classes": {
+                "Behavior3": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "yagl-behavior3\\lib\\tick.js": {
+            "name": "yagl-behavior3\\lib\\tick.js",
+            "modules": {},
+            "classes": {
+                "Tick": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "yagl-behavior3\\lib\\tree.js": {
+            "name": "yagl-behavior3\\lib\\tree.js",
+            "modules": {},
+            "classes": {
+                "BehaviorTree": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "yagl-behavior3\\lib\\utils.js": {
+            "name": "yagl-behavior3\\lib\\utils.js",
+            "modules": {
+                "utils": 1
+            },
+            "classes": {
+                "Utils": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "utils": {
+            "name": "utils",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Utils": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "yagl-behavior3\\lib\\utils.js",
+            "line": 6
+        },
+        "behavior3": {
+            "name": "behavior3",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "BehaviorTree": 1,
+                "Behavior3": 1,
+                "Tick": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "yagl-behavior3\\lib\\tick.js",
+            "line": 11
+        }
+    },
+    "classes": {
+        "BehaviorTree": {
+            "name": "BehaviorTree",
+            "shortname": "BehaviorTree",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "behavior3",
+            "file": "yagl-behavior3\\lib\\tree.js",
+            "line": 14,
+            "description": "A behavior tree.",
+            "is_constructor": 1
+        },
+        "Utils": {
+            "name": "Utils",
+            "shortname": "Utils",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "utils",
+            "namespace": "",
+            "file": "yagl-behavior3\\lib\\utils.js",
+            "line": 6,
+            "description": "Generate unique Number sequentially.",
+            "itemtype": "method",
+            "return": {
+                "description": "A unique Number.",
+                "type": "Number"
+            }
+        },
+        "Behavior3": {
+            "name": "Behavior3",
+            "shortname": "Behavior3",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "behavior3",
+            "namespace": "",
+            "file": "yagl-behavior3\\lib\\index.js",
+            "line": 21,
+            "description": "This is what is returned by a `require('yagl-behavior3')`"
+        },
+        "Tick": {
+            "name": "Tick",
+            "shortname": "Tick",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "behavior3",
+            "namespace": "",
+            "file": "yagl-behavior3\\lib\\tick.js",
+            "line": 11,
+            "description": "Represent a tick (update) which holds context for the tree traversal.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "tree",
+                    "description": "The behavior tree.",
+                    "type": "BehaviorTree"
+                },
+                {
+                    "name": "target",
+                    "description": "Target object of the tick.",
+                    "type": "*"
+                },
+                {
+                    "name": "blackboard",
+                    "description": "The associated blackboard.",
+                    "type": "Blackboard"
+                }
+            ]
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "yagl-behavior3\\dist\\blackboard.js",
+            "line": 2,
+            "description": "Blackboard - the memory structure for bt/nodes. Allow to store:\n- global information\n- per-tree information\n- per-tree and per-node information",
+            "class": "BehaviorTree"
+        },
+        {
+            "file": "yagl-behavior3\\dist\\blackboard.js",
+            "line": 26,
+            "description": "returns memory Map for given tree",
+            "class": "BehaviorTree"
+        },
+        {
+            "file": "yagl-behavior3\\dist\\tree.js",
+            "line": 1,
+            "description": "module ecs",
+            "class": "BehaviorTree"
+        },
+        {
+            "file": "yagl-behavior3\\dist\\tree.js",
+            "line": 42,
+            "description": "Update the behavior tree.",
+            "params": [
+                {
+                    "name": "target",
+                    "description": "[description]",
+                    "type": "[type]"
+                },
+                {
+                    "name": "blackboard",
+                    "description": "[description]",
+                    "type": "[type]"
+                }
+            ],
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            },
+            "class": "BehaviorTree"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\blackboard.js",
+            "line": 2,
+            "description": "Blackboard - the memory structure for bt/nodes. Allow to store:\n- global information\n- per-tree information\n- per-tree and per-node information",
+            "class": "Behavior3",
+            "module": "utils"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\blackboard.js",
+            "line": 13,
+            "description": "returns memory Map for given tree",
+            "class": "Behavior3",
+            "module": "utils"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\index.js",
+            "line": 27,
+            "itemtype": "property",
+            "name": "State",
+            "type": "Object",
+            "class": "Behavior3",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\index.js",
+            "line": 31,
+            "itemtype": "property",
+            "name": "Blackboard",
+            "type": "Class",
+            "class": "Behavior3",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\index.js",
+            "line": 35,
+            "itemtype": "property",
+            "name": "BaseNode",
+            "type": "Class",
+            "class": "Behavior3",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\index.js",
+            "line": 39,
+            "itemtype": "property",
+            "name": "BehaviorTree",
+            "type": "Class",
+            "class": "Behavior3",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\index.js",
+            "line": 43,
+            "itemtype": "property",
+            "name": "Tick",
+            "type": "Class",
+            "class": "Behavior3",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tick.js",
+            "line": 19,
+            "description": "The behavior tree.",
+            "itemtype": "property",
+            "name": "tree",
+            "type": "BehaviorTree",
+            "class": "Tick",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tick.js",
+            "line": 25,
+            "description": "Store currentl opened nodes.",
+            "itemtype": "property",
+            "name": "openNodes",
+            "type": "Array",
+            "class": "Tick",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tick.js",
+            "line": 31,
+            "description": "Count the opened nodes.",
+            "itemtype": "property",
+            "name": "nodeCount",
+            "type": "Number",
+            "class": "Tick",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tick.js",
+            "line": 37,
+            "description": "The target object of the tick.",
+            "itemtype": "property",
+            "name": "target",
+            "type": "*",
+            "class": "Tick",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tick.js",
+            "line": 43,
+            "description": "The blackboard context of the tick.",
+            "itemtype": "property",
+            "name": "blackboard",
+            "type": "Blackboard",
+            "class": "Tick",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tick.js",
+            "line": 49,
+            "description": "Push the node to opened nodes.",
+            "itemtype": "method",
+            "name": "enterNode",
+            "params": [
+                {
+                    "name": "node",
+                    "description": "The node to open.",
+                    "type": "BaseNode"
+                }
+            ],
+            "class": "Tick",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tick.js",
+            "line": 59,
+            "description": "Close the first node.",
+            "itemtype": "method",
+            "name": "closeNode",
+            "class": "Tick",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tree.js",
+            "line": 1,
+            "description": "module behavior3",
+            "class": "BehaviorTree",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tree.js",
+            "line": 19,
+            "description": "Unique ID of the BehaviorTree, this id is used when storing / retrieving\ndata to the blackboard object.",
+            "itemtype": "property",
+            "name": "id",
+            "type": "Number",
+            "class": "BehaviorTree",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tree.js",
+            "line": 27,
+            "description": "The root node of the tree.",
+            "itemtype": "property",
+            "name": "root",
+            "type": "BaseNode",
+            "class": "BehaviorTree",
+            "module": "behavior3"
+        },
+        {
+            "file": "yagl-behavior3\\lib\\tree.js",
+            "line": 34,
+            "description": "Apply the behavior tree to an entity with a context blackboard.",
+            "itemtype": "method",
+            "name": "tick",
+            "params": [
+                {
+                    "name": "target",
+                    "description": "The target object of the tick.",
+                    "type": "*"
+                },
+                {
+                    "name": "blackboard",
+                    "description": "The blackboard too use as context.",
+                    "type": "Backbord"
+                }
+            ],
+            "class": "BehaviorTree",
+            "module": "behavior3"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nBlackboard - the memory structure for bt/nodes. Allow to store:\n- global information\n- per-tree information\n- per-tree and per-node information",
+            "line": " yagl-behavior3\\dist\\blackboard.js:2"
+        },
+        {
+            "message": "Missing item type\nreturns memory Map for given tree",
+            "line": " yagl-behavior3\\dist\\blackboard.js:26"
+        },
+        {
+            "message": "Missing item type\nmodule ecs",
+            "line": " yagl-behavior3\\dist\\tree.js:1"
+        },
+        {
+            "message": "Missing item type\nUpdate the behavior tree.",
+            "line": " yagl-behavior3\\dist\\tree.js:42"
+        },
+        {
+            "message": "Missing item type\nBlackboard - the memory structure for bt/nodes. Allow to store:\n- global information\n- per-tree information\n- per-tree and per-node information",
+            "line": " yagl-behavior3\\lib\\blackboard.js:2"
+        },
+        {
+            "message": "Missing item type\nreturns memory Map for given tree",
+            "line": " yagl-behavior3\\lib\\blackboard.js:13"
+        },
+        {
+            "message": "Missing item type\nmodule behavior3",
+            "line": " yagl-behavior3\\lib\\tree.js:1"
+        }
+    ]
+}

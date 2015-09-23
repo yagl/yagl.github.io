@@ -1,3 +1,6 @@
-[submodule "yammo-ecs"]
-	path = yammo-ecs
-	url = https://github.com/yammo/ecs.git
+[submodule "yagl-behavior3"]
+	path = yagl-behavior3
+	url = https://github.com/yagl/behavior3.git
+[submodule "yagl-ecs"]
+	path = yagl-ecs
+	url = https://github.com/yagl/ecs.git

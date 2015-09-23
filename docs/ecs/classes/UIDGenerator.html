@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>UIDGenerator</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/lucid.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+            
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b></b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/ECS", "classes/Entity", "classes/System", "classes/UID", "classes/UIDGenerator", "modules/ecs", "modules/uid"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+	    <div>
+	        <div id="sidebar">
+	        <div id="classes">
+	            <ul id="api-classes" class="nav nav-list">
+	                    <li><a href="../classes/ECS.html">ECS</a></li>
+	                    <li><a href="../classes/Entity.html">Entity</a></li>
+	                    <li><a href="../classes/System.html">System</a></li>
+	                    <li><a href="../classes/UID.html">UID</a></li>
+	                    <li><a href="../classes/UIDGenerator.html">UIDGenerator</a></li>
+	            </ul>
+	        </div>
+	        </div>
+	    </div>
+        </div>
+        <div class="span9">
+                <form id="options-form" class="form-inline pull-right">
+                    Show:
+                    <label for="api-show-inherited" class="checkbox">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected" class="checkbox">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private" class="checkbox">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated" class="checkbox">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </form>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <div class="page-header">
+                            <h1>UIDGenerator</h1>
+                        </div>
+                        
+                        
+                        
+                        	<div class="well well-small">
+                                    Module: <a href="../modules/uid.html">uid</a>
+                            </div>
+                        
+                        
+                        
+                        <div class="yuidoc-class-description">
+                        <p>Generate unique sequences of Numbers. Can be salted (up to 9999 salts)
+                        to generate differents ids.</p>
+                        <p>To work properly, ECS needs to associate an unique id with each entity. But
+                        to preserve efficiency, the unique id must be a Number (more exactly a safe
+                        integer).</p>
+                        <p>The basic implementation would be an incremented Number to generate a unique
+                        sequence, but this fails when several ecs instances are running and creating
+                        entities concurrently (e.g. in a multiplayer networked game). To work around
+                        this problem, ecs provide UIDGenerator class which allow you to salt your
+                        generated ids sequence. Two generators with different salts will NEVER
+                        generate the same ids.</p>
+                        <p>Currently, there is a maxumum of 9999 salts and about 900719925473 uid per
+                        salt. These limits are hard-coded, but I plan to expose these settings in
+                        the future.</p>
+                        
+                        </div>
+                        
+                        <!-- table of contents -->
+                        
+                        <div id="class-toc" class="page-section">
+                        	<h2>Table of Contents</h2>
+                            <ul>
+                        
+                        		<li>
+                        			<strong>Properties</strong>
+                        			<ul>
+                        				<li><a href="#prop-salt"><span class="ip">salt</span></a></li>
+                        				<li><a href="#prop-salt"><span class="ip">salt</span></a></li>
+                        				<li><a href="#prop-uidCount"><span class="ip">uidCount</span></a></li>
+                        				<li><a href="#prop-uidCount"><span class="ip">uidCount</span></a></li>
+                        			</ul>
+                        		</li>
+                        
+                        
+                        	</ul>
+                        </div>
+                        
+                        <!-- details -->
+                        
+                            <div class="constructor yuidoc-class-constructor page-section">
+                                <h2>Constructor</h2>
+                                <div class="item-list">
+                                <div id="method-UIDGenerator" class="method item">
+                                	<div class="method-signature">
+                                	<span class="name"><code>UIDGenerator</code></span>
+                                
+                                		<div class="args">
+                                			<span class="paren">(</span><ul class="args-list inline commas">
+                                				<li class="arg">
+                                						<code class="optional">salt=0</code>
+                                				</li>
+                                			</ul><span class="paren">)</span>
+                                		</div>
+                                	</div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                	<div class="meta">
+                                				<p>
+                                				Defined in
+                                		<a href="../files/yagl-ecs_src_uid.js.html#l44"><code>yagl-ecs\src\uid.js:44</code></a>
+                                		</p>
+                                
+                                
+                                
+                                	</div>
+                                
+                                
+                                		<div class="params">
+                                			<h4>Parameters:</h4>
+                                
+                                			<ul class="params-list">
+                                				<li class="param">
+                                						<code class="param-name optional">[salt=0]</code>
+                                						<span class="type">Number</span>
+                                						<span class="flag optional" title="This parameter is optional.">optional</span>
+                                
+                                
+                                					<div class="param-description"><p>The salt to use for this generator. Number
+                                between 0 and 9999 (inclusive).</p>
+                                </div>
+                                
+                                				</li>
+                                			</ul>
+                                		</div>
+                                
+                                
+                                </div>
+                                </div>
+                            </div>
+                        
+                        
+                            <div id="properties" class="page-section">
+                                <h2 class="off-left">Properties</h2>
+                        
+                                <div class="item-list">
+                                    <div id="prop-salt" class="property item">
+                                        <h3 class="name"><code>salt</code></h3>
+                                        <span class="type">Number</span>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <div class="meta">
+                                                    <p>
+                                                    Defined in
+                                            <a href="../files/yagl-ecs_dist_uid.js.html#l64"><code>yagl-ecs\dist\uid.js:64</code></a>
+                                            </p>
+                                    
+                                    
+                                        </div>
+                                    
+                                        <div class="description">
+                                            <p>The salt of this generator.</p>
+                                    
+                                        </div>
+                                    
+                                    
+                                    
+                                    </div>
+                                    <div id="prop-salt" class="property item">
+                                        <h3 class="name"><code>salt</code></h3>
+                                        <span class="type">Number</span>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <div class="meta">
+                                                    <p>
+                                                    Defined in
+                                            <a href="../files/yagl-ecs_src_uid.js.html#l51"><code>yagl-ecs\src\uid.js:51</code></a>
+                                            </p>
+                                    
+                                    
+                                        </div>
+                                    
+                                        <div class="description">
+                                            <p>The salt of this generator.</p>
+                                    
+                                        </div>
+                                    
+                                    
+                                    
+                                    </div>
+                                    <div id="prop-uidCount" class="property item">
+                                        <h3 class="name"><code>uidCount</code></h3>
+                                        <span class="type">Number</span>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <div class="meta">
+                                                    <p>
+                                                    Defined in
+                                            <a href="../files/yagl-ecs_dist_uid.js.html#l70"><code>yagl-ecs\dist\uid.js:70</code></a>
+                                            </p>
+                                    
+                                    
+                                        </div>
+                                    
+                                        <div class="description">
+                                            <p>The counter used to generate unique sequence.</p>
+                                    
+                                        </div>
+                                    
+                                    
+                                    
+                                    </div>
+                                    <div id="prop-uidCount" class="property item">
+                                        <h3 class="name"><code>uidCount</code></h3>
+                                        <span class="type">Number</span>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                        <div class="meta">
+                                                    <p>
+                                                    Defined in
+                                            <a href="../files/yagl-ecs_src_uid.js.html#l57"><code>yagl-ecs\src\uid.js:57</code></a>
+                                            </p>
+                                    
+                                    
+                                        </div>
+                                    
+                                        <div class="description">
+                                            <p>The counter used to generate unique sequence.</p>
+                                    
+                                        </div>
+                                    
+                                    
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

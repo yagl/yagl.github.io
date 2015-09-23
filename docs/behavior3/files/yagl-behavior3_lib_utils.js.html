@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>ecs</title>
+    <title>yagl-behavior3\lib\utils.js</title>
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -26,7 +26,7 @@
             </li>
         </div>
         <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
-            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/ECS", "classes/Entity", "classes/System", "classes/UID", "classes/UIDGenerator", "modules/ecs", "modules/uid"]'>
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/Behavior3", "classes/BehaviorTree", "classes/Tick", "classes/Utils", "modules/behavior3", "modules/utils"]'>
         </form>
     </div>
 </div>
@@ -37,11 +37,10 @@
 	        <div id="sidebar">
 	        <div id="classes">
 	            <ul id="api-classes" class="nav nav-list">
-	                    <li><a href="../classes/ECS.html">ECS</a></li>
-	                    <li><a href="../classes/Entity.html">Entity</a></li>
-	                    <li><a href="../classes/System.html">System</a></li>
-	                    <li><a href="../classes/UID.html">UID</a></li>
-	                    <li><a href="../classes/UIDGenerator.html">UIDGenerator</a></li>
+	                    <li><a href="../classes/Behavior3.html">Behavior3</a></li>
+	                    <li><a href="../classes/BehaviorTree.html">BehaviorTree</a></li>
+	                    <li><a href="../classes/Tick.html">Tick</a></li>
+	                    <li><a href="../classes/Utils.html">Utils</a></li>
 	            </ul>
 	        </div>
 	        </div>
@@ -75,49 +74,27 @@
                 <div id="docs-main">
                     <div class="content">
                         <div class="page-header">
-                            <h1>ecs <small>Module</small></h1>
+                            <h1>yagl-behavior3\lib\utils.js <small>File</small></h1>
                         </div>
                         
-                        <div class="clearfix well well-small">
+                        <div class="file">
+                            <pre class="prettyprint linenums">
+                        /**
+                         * @module utils
+                         */
+                        var currentUUID = 0;
                         
-                        
-                                <div class="foundat">
-                                    Defined in: <a href="../files/yagl-ecs_src_ecs.js.html#l15"><code>yagl-ecs\src\ecs.js:15</code></a>
-                                </div>
-                        
-                        </div>
-                        
-                        
-                        <div class="moduledesc well well-small">
-                            
-                        </div>
-                        
-                        
-                        <div class="yui3-g">
-                            <div class="yui3-u-1-2">
-                                    <p>This module provides the following classes:</p>
-                        
-                                    <ul class="module-classes">
-                                        <li class="module-class">
-                                            <a href="../classes/ECS.html">
-                                                ECS
-                                            </a>
-                                        </li>
-                                        <li class="module-class">
-                                            <a href="../classes/Entity.html">
-                                                Entity
-                                            </a>
-                                        </li>
-                                        <li class="module-class">
-                                            <a href="../classes/System.html">
-                                                System
-                                            </a>
-                                        </li>
-                                    </ul>
-                            </div>
-                        
-                            <div class="yui3-u-1-2">
-                            </div>
+                        /**
+                         * Generate unique Number sequentially.
+                         * 
+                         * @class Utils
+                         * @method  createUUID
+                         * @return {Number} A unique Number.
+                         */
+                        export function createUUID() {
+                          return currentUUID++;
+                        }
+                            </pre>
                         </div>
                     </div>
                 </div>
