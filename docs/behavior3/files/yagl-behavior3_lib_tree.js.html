@@ -33,124 +33,124 @@
 <div class="container">
     <div class="row">
         <div class="span3">
-	    <div>
-	        <div id="sidebar">
-	        <div id="classes">
-	            <ul id="api-classes" class="nav nav-list">
-	                    <li><a href="../classes/Behavior3.html">Behavior3</a></li>
-	                    <li><a href="../classes/BehaviorTree.html">BehaviorTree</a></li>
-	                    <li><a href="../classes/Tick.html">Tick</a></li>
-	                    <li><a href="../classes/Utils.html">Utils</a></li>
-	            </ul>
-	        </div>
-	        </div>
-	    </div>
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/Behavior3.html">Behavior3</a></li>
+                <li><a href="../classes/BehaviorTree.html">BehaviorTree</a></li>
+                <li><a href="../classes/Tick.html">Tick</a></li>
+                <li><a href="../classes/Utils.html">Utils</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
         </div>
         <div class="span9">
-                <form id="options-form" class="form-inline pull-right">
-                    Show:
-                    <label for="api-show-inherited" class="checkbox">
-                        <input type="checkbox" id="api-show-inherited" checked>
-                        Inherited
-                    </label>
-            
-                    <label for="api-show-protected" class="checkbox">
-                        <input type="checkbox" id="api-show-protected">
-                        Protected
-                    </label>
-            
-                    <label for="api-show-private" class="checkbox">
-                        <input type="checkbox" id="api-show-private">
-                        Private
-                    </label>
-                    <label for="api-show-deprecated" class="checkbox">
-                        <input type="checkbox" id="api-show-deprecated">
-                        Deprecated
-                    </label>
-            
-                </form>
-            
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <div class="page-header">
-                            <h1>yagl-behavior3\lib\tree.js <small>File</small></h1>
-                        </div>
-                        
-                        <div class="file">
-                            <pre class="prettyprint linenums">
-                        /**
-                         * module behavior3
-                         */
-                        
-                        import {createUUID} from &#x27;./utils&#x27;;
-                        import Tick from &#x27;./tick&#x27;;
-                        
-                        /**
-                         * A behavior tree.
-                         * 
-                         * @class  BehaviorTree
-                         */
-                        export default class BehavoirTree {
-                          /**
-                           * @constructor
-                           * @class  BehaviorTree
-                           */
-                          constructor() {
-                            /**
-                             * Unique ID of the BehaviorTree, this id is used when storing / retrieving
-                             * data to the blackboard object.
-                             * 
-                             * @property {Number} id
-                             */
-                            this.id = createUUID();
-                        
-                            /**
-                             * The root node of the tree.
-                             * 
-                             * @property {BaseNode} root
-                             */
-                            this.root = null;
-                          }
-                          /**
-                           * Apply the behavior tree to an entity with a context blackboard.
-                           *
-                           * @method  tick
-                           * @param  {*} target The target object of the tick.
-                           * @param  {Backbord} blackboard The blackboard too use as context.
-                           */
-                          tick(target, blackboard) {
-                            var tick = new Tick(this, target, blackboard);
-                        
-                            // execute the whole tree
-                            this.root.execute(tick);
-                        
-                            var lastOpenNodes = blackboard.get(&#x27;openNodes&#x27;, this.id);
-                            var currOpenNodes = tick.openNodes.slice(0);
-                        
-                            var start = 0;
-                            var max = Math.min(lastOpenNodes.length, currOpenNodes.length);
-                        
-                            // does not close if still open in this tick
-                            for (var i = 0; i &lt; max; i += 1) {
-                              start = i + 1;
-                              if (lastOpenNodes[i] !== currOpenNodes[i]) {
-                                break;
-                              }
-                            }
-                        
-                            // close the nodes that are still opened
-                            for (var i = lastOpenNodes.length - 1; i &gt;= start; i -= 1) {
-                              lastOpenNodes[i]._close(tick);
-                            }
-                        
-                            blackboard.set(&#x27;openNodes&#x27;, currOpenNodes, this.id);
-                            blackboard.set(&#x27;nodeCount&#x27;, tick.nodeCount, this.id);
-                          }
-                        }
-                        
-                            </pre>
-                        </div>
+<div class="page-header">
+    <h1>yagl-behavior3\lib\tree.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+/**
+ * module behavior3
+ */
+
+import {createUUID} from &#x27;./utils&#x27;;
+import Tick from &#x27;./tick&#x27;;
+
+/**
+ * A behavior tree.
+ * 
+ * @class  BehaviorTree
+ */
+export default class BehavoirTree {
+  /**
+   * @constructor
+   * @class  BehaviorTree
+   */
+  constructor() {
+    /**
+     * Unique ID of the BehaviorTree, this id is used when storing / retrieving
+     * data to the blackboard object.
+     * 
+     * @property {Number} id
+     */
+    this.id = createUUID();
+
+    /**
+     * The root node of the tree.
+     * 
+     * @property {BaseNode} root
+     */
+    this.root = null;
+  }
+  /**
+   * Apply the behavior tree to an entity with a context blackboard.
+   *
+   * @method  tick
+   * @param  {*} target The target object of the tick.
+   * @param  {Backbord} blackboard The blackboard too use as context.
+   */
+  tick(target, blackboard) {
+    var tick = new Tick(this, target, blackboard);
+
+    // execute the whole tree
+    this.root.execute(tick);
+
+    var lastOpenNodes = blackboard.get(&#x27;openNodes&#x27;, this.id);
+    var currOpenNodes = tick.openNodes.slice(0);
+
+    var start = 0;
+    var max = Math.min(lastOpenNodes.length, currOpenNodes.length);
+
+    // does not close if still open in this tick
+    for (var i = 0; i &lt; max; i += 1) {
+      start = i + 1;
+      if (lastOpenNodes[i] !== currOpenNodes[i]) {
+        break;
+      }
+    }
+
+    // close the nodes that are still opened
+    for (var i = lastOpenNodes.length - 1; i &gt;= start; i -= 1) {
+      lastOpenNodes[i]._close(tick);
+    }
+
+    blackboard.set(&#x27;openNodes&#x27;, currOpenNodes, this.id);
+    blackboard.set(&#x27;nodeCount&#x27;, tick.nodeCount, this.id);
+  }
+}
+
+    </pre>
+</div>
                     </div>
                 </div>
             </div>

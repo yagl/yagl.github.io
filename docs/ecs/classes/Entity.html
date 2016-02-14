@@ -33,377 +33,377 @@
 <div class="container">
     <div class="row">
         <div class="span3">
-	    <div>
-	        <div id="sidebar">
-	        <div id="classes">
-	            <ul id="api-classes" class="nav nav-list">
-	                    <li><a href="../classes/ECS.html">ECS</a></li>
-	                    <li><a href="../classes/Entity.html">Entity</a></li>
-	                    <li><a href="../classes/System.html">System</a></li>
-	                    <li><a href="../classes/UID.html">UID</a></li>
-	                    <li><a href="../classes/UIDGenerator.html">UIDGenerator</a></li>
-	            </ul>
-	        </div>
-	        </div>
-	    </div>
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/ECS.html">ECS</a></li>
+                <li><a href="../classes/Entity.html">Entity</a></li>
+                <li><a href="../classes/System.html">System</a></li>
+                <li><a href="../classes/UID.html">UID</a></li>
+                <li><a href="../classes/UIDGenerator.html">UIDGenerator</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
         </div>
         <div class="span9">
-                <form id="options-form" class="form-inline pull-right">
-                    Show:
-                    <label for="api-show-inherited" class="checkbox">
-                        <input type="checkbox" id="api-show-inherited" checked>
-                        Inherited
-                    </label>
-            
-                    <label for="api-show-protected" class="checkbox">
-                        <input type="checkbox" id="api-show-protected">
-                        Protected
-                    </label>
-            
-                    <label for="api-show-private" class="checkbox">
-                        <input type="checkbox" id="api-show-private">
-                        Private
-                    </label>
-                    <label for="api-show-deprecated" class="checkbox">
-                        <input type="checkbox" id="api-show-deprecated">
-                        Deprecated
-                    </label>
-            
-                </form>
-            
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <div class="page-header">
-                            <h1>Entity</h1>
-                        </div>
-                        
-                        
-                        
-                        	<div class="well well-small">
-                                    Module: <a href="../modules/ecs.html">ecs</a>
-                            </div>
-                        
-                        
-                        
-                        <div class="yuidoc-class-description">
-                        <p>An entity.</p>
-                        
-                        </div>
-                        
-                        <!-- table of contents -->
-                        
-                        <div id="class-toc" class="page-section">
-                        	<h2>Table of Contents</h2>
-                            <ul>
-                        		<li>
-                        			<strong>Methods</strong>
-                        			<ul>
-                        				<li><a href="#method-updateComponent"><span class="im">updateComponent</span>(<span class="ia">name</span><span class="ia">data</span>)</a></li>
-                        			</ul>
-                        		</li>
-                        
-                        		<li>
-                        			<strong>Properties</strong>
-                        			<ul>
-                        				<li><a href="#prop-components"><span class="ip">components</span></a></li>
-                        				<li><a href="#prop-ecs"><span class="ip">ecs</span></a></li>
-                        				<li><a href="#prop-id"><span class="ip">id</span></a></li>
-                        				<li><a href="#prop-systems"><span class="ip">systems</span></a></li>
-                        				<li><a href="#prop-systemsDirty"><span class="ip">systemsDirty</span></a></li>
-                        			</ul>
-                        		</li>
-                        
-                        
-                        	</ul>
-                        </div>
-                        
-                        <!-- details -->
-                        
-                            <div class="constructor yuidoc-class-constructor page-section">
-                                <h2>Constructor</h2>
-                                <div class="item-list">
-                                <div id="method-Entity" class="method item">
-                                	<div class="method-signature">
-                                	<span class="name"><code>Entity</code></span>
-                                
-                                		<div class="args">
-                                			<span class="paren">(</span><ul class="args-list inline commas">
-                                				<li class="arg">
-                                						<code class="optional">idOrUidGenerator=null</code>
-                                				</li>
-                                				<li class="arg">
-                                						<code class="optional">components=[]</code>
-                                				</li>
-                                			</ul><span class="paren">)</span>
-                                		</div>
-                                	</div>
-                                
-                                
-                                
-                                
-                                
-                                
-                                	<div class="meta">
-                                				<p>
-                                				Defined in
-                                		<a href="../files/yagl-ecs_src_Entity.js.html#l13"><code>yagl-ecs\src\Entity.js:13</code></a>
-                                		</p>
-                                
-                                
-                                
-                                	</div>
-                                
-                                
-                                		<div class="params">
-                                			<h4>Parameters:</h4>
-                                
-                                			<ul class="params-list">
-                                				<li class="param">
-                                						<code class="param-name optional">[idOrUidGenerator=null]</code>
-                                						<span class="type">Number  |  <a href="../classes/UIDGenerator.html" class="crosslink">UIDGenerator</a></span>
-                                						<span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                
-                                					<div class="param-description"><p>The entity id if
-                                a Number is passed. If an UIDGenerator is passed, the entity will use
-                                it to generate a new id. If nothing is passed, the entity will use
-                                the default UIDGenerator.</p>
-                                </div>
-                                
-                                				</li>
-                                				<li class="param">
-                                						<code class="param-name optional">[components=[]]</code>
-                                						<span class="type">ArrayComponent</span>
-                                						<span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                
-                                					<div class="param-description"><p>An array of initial components.</p>
-                                </div>
-                                
-                                				</li>
-                                			</ul>
-                                		</div>
-                                
-                                
-                                </div>
-                                </div>
-                            </div>
-                        
-                            <div id="methods" class="page-section">
-                                <h2 class="off-left">Methods</h2>
-                                <div class="item-list">
-                                    <div id="method-updateComponent" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>updateComponent</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>name</code>
-                                    				</li>
-                                    				<li class="arg">
-                                    						<code>data</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_Entity.js.html#l162"><code>yagl-ecs\src\Entity.js:162</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Update a component field by field, NOT recursively. If the component
-                                    does not exists, this method create it silently.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">name</code>
-                                    						<span class="type">String</span>
-                                    
-                                    
-                                    					<div class="param-description"><p>Name of the component</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    				<li class="param">
-                                    						<code class="param-name">data</code>
-                                    						<span class="type">Object</span>
-                                    
-                                    
-                                    					<div class="param-description"><p>Dict of attributes to update</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    
-                                    		<div class="example">
-                                    			<h4>Example:</h4>
-                                    
-                                    			<div class="example-content">
-                                    				<p>entity.addComponent('kite', {vel: 0, pos: {x: 1}});
-                                    // entity.component.pos is '{vel: 0, pos: {x: 1}}'
-                                    entity.updateComponent('kite', {angle: 90, pos: {y: 1}});
-                                    // entity.component.pos is '{vel: 0, angle: 90, pos: {y: 1}}'</p>
-                                    
-                                    			</div>
-                                    		</div>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div id="properties" class="page-section">
-                                <h2 class="off-left">Properties</h2>
-                        
-                                <div class="item-list">
-                                    <div id="prop-components" class="property item">
-                                        <h3 class="name"><code>components</code></h3>
-                                        <span class="type">Object</span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_Entity.js.html#l62"><code>yagl-ecs\src\Entity.js:62</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>Components of the entity stored as key-value pairs.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                    <div id="prop-ecs" class="property item">
-                                        <h3 class="name"><code>ecs</code></h3>
-                                        <span class="type"><a href="../classes/ECS.html" class="crosslink">ECS</a></span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_Entity.js.html#l84"><code>yagl-ecs\src\Entity.js:84</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>A reference to parent ECS class.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                    <div id="prop-id" class="property item">
-                                        <h3 class="name"><code>id</code></h3>
-                                        <span class="type">Number</span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_Entity.js.html#l25"><code>yagl-ecs\src\Entity.js:25</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>Unique identifier of the entity.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                    <div id="prop-systems" class="property item">
-                                        <h3 class="name"><code>systems</code></h3>
-                                        <span class="type">ArraySystem</span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_Entity.js.html#l47"><code>yagl-ecs\src\Entity.js:47</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>Systems applied to the entity.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                    <div id="prop-systemsDirty" class="property item">
-                                        <h3 class="name"><code>systemsDirty</code></h3>
-                                        <span class="type">Boolean</span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_Entity.js.html#l54"><code>yagl-ecs\src\Entity.js:54</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>Indiquate a change in components (a component was removed or added)
-                                    which require to re-compute entity eligibility to all systems.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                        
-                        
-                        
+<div class="page-header">
+    <h1>Entity</h1>
+</div>
+
+
+
+	<div class="well well-small">
+            Module: <a href="../modules/ecs.html">ecs</a>
+    </div>
+
+
+
+<div class="yuidoc-class-description">
+<p>An entity.</p>
+
+</div>
+
+<!-- table of contents -->
+
+<div id="class-toc" class="page-section">
+	<h2>Table of Contents</h2>
+    <ul>
+		<li>
+			<strong>Methods</strong>
+			<ul>
+				<li><a href="#method-updateComponent"><span class="im">updateComponent</span>(<span class="ia">name</span><span class="ia">data</span>)</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<strong>Properties</strong>
+			<ul>
+				<li><a href="#prop-components"><span class="ip">components</span></a></li>
+				<li><a href="#prop-ecs"><span class="ip">ecs</span></a></li>
+				<li><a href="#prop-id"><span class="ip">id</span></a></li>
+				<li><a href="#prop-systems"><span class="ip">systems</span></a></li>
+				<li><a href="#prop-systemsDirty"><span class="ip">systemsDirty</span></a></li>
+			</ul>
+		</li>
+
+
+	</ul>
+</div>
+
+<!-- details -->
+
+    <div class="constructor yuidoc-class-constructor page-section">
+        <h2>Constructor</h2>
+        <div class="item-list">
+<div id="method-Entity" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>Entity</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code class="optional">idOrUidGenerator=null</code>
+				</li>
+				<li class="arg">
+						<code class="optional">components=[]</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_Entity.js.html#l13"><code>yagl-ecs\src\Entity.js:13</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name optional">[idOrUidGenerator=null]</code>
+						<span class="type">Number  |  <a href="../classes/UIDGenerator.html" class="crosslink">UIDGenerator</a></span>
+						<span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+					<div class="param-description"><p>The entity id if
+a Number is passed. If an UIDGenerator is passed, the entity will use
+it to generate a new id. If nothing is passed, the entity will use
+the default UIDGenerator.</p>
+</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name optional">[components=[]]</code>
+						<span class="type">ArrayComponent</span>
+						<span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+					<div class="param-description"><p>An array of initial components.</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+        </div>
+    </div>
+
+    <div id="methods" class="page-section">
+        <h2 class="off-left">Methods</h2>
+        <div class="item-list">
+<div id="method-updateComponent" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>updateComponent</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>name</code>
+				</li>
+				<li class="arg">
+						<code>data</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_Entity.js.html#l163"><code>yagl-ecs\src\Entity.js:163</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Update a component field by field, NOT recursively. If the component
+does not exists, this method create it silently.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">name</code>
+						<span class="type">String</span>
+
+
+					<div class="param-description"><p>Name of the component</p>
+</div>
+
+				</li>
+				<li class="param">
+						<code class="param-name">data</code>
+						<span class="type">Object</span>
+
+
+					<div class="param-description"><p>Dict of attributes to update</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+		<div class="example">
+			<h4>Example:</h4>
+
+			<div class="example-content">
+				<p>entity.addComponent('kite', {vel: 0, pos: {x: 1}});
+// entity.component.pos is '{vel: 0, pos: {x: 1}}'
+entity.updateComponent('kite', {angle: 90, pos: {y: 1}});
+// entity.component.pos is '{vel: 0, angle: 90, pos: {y: 1}}'</p>
+
+			</div>
+		</div>
+</div>
+        </div>
+    </div>
+
+    <div id="properties" class="page-section">
+        <h2 class="off-left">Properties</h2>
+
+        <div class="item-list">
+<div id="prop-components" class="property item">
+    <h3 class="name"><code>components</code></h3>
+    <span class="type">Object</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_Entity.js.html#l62"><code>yagl-ecs\src\Entity.js:62</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Components of the entity stored as key-value pairs.</p>
+
+    </div>
+
+
+
+</div>
+<div id="prop-ecs" class="property item">
+    <h3 class="name"><code>ecs</code></h3>
+    <span class="type"><a href="../classes/ECS.html" class="crosslink">ECS</a></span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_Entity.js.html#l84"><code>yagl-ecs\src\Entity.js:84</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>A reference to parent ECS class.</p>
+
+    </div>
+
+
+
+</div>
+<div id="prop-id" class="property item">
+    <h3 class="name"><code>id</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_Entity.js.html#l25"><code>yagl-ecs\src\Entity.js:25</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Unique identifier of the entity.</p>
+
+    </div>
+
+
+
+</div>
+<div id="prop-systems" class="property item">
+    <h3 class="name"><code>systems</code></h3>
+    <span class="type">ArraySystem</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_Entity.js.html#l47"><code>yagl-ecs\src\Entity.js:47</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Systems applied to the entity.</p>
+
+    </div>
+
+
+
+</div>
+<div id="prop-systemsDirty" class="property item">
+    <h3 class="name"><code>systemsDirty</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_Entity.js.html#l54"><code>yagl-ecs\src\Entity.js:54</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Indiquate a change in components (a component was removed or added)
+which require to re-compute entity eligibility to all systems.</p>
+
+    </div>
+
+
+
+</div>
+        </div>
+    </div>
+
+
+
                     </div>
                 </div>
             </div>

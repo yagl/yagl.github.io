@@ -33,619 +33,619 @@
 <div class="container">
     <div class="row">
         <div class="span3">
-	    <div>
-	        <div id="sidebar">
-	        <div id="classes">
-	            <ul id="api-classes" class="nav nav-list">
-	                    <li><a href="../classes/ECS.html">ECS</a></li>
-	                    <li><a href="../classes/Entity.html">Entity</a></li>
-	                    <li><a href="../classes/System.html">System</a></li>
-	                    <li><a href="../classes/UID.html">UID</a></li>
-	                    <li><a href="../classes/UIDGenerator.html">UIDGenerator</a></li>
-	            </ul>
-	        </div>
-	        </div>
-	    </div>
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/ECS.html">ECS</a></li>
+                <li><a href="../classes/Entity.html">Entity</a></li>
+                <li><a href="../classes/System.html">System</a></li>
+                <li><a href="../classes/UID.html">UID</a></li>
+                <li><a href="../classes/UIDGenerator.html">UIDGenerator</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
         </div>
         <div class="span9">
-                <form id="options-form" class="form-inline pull-right">
-                    Show:
-                    <label for="api-show-inherited" class="checkbox">
-                        <input type="checkbox" id="api-show-inherited" checked>
-                        Inherited
-                    </label>
-            
-                    <label for="api-show-protected" class="checkbox">
-                        <input type="checkbox" id="api-show-protected">
-                        Protected
-                    </label>
-            
-                    <label for="api-show-private" class="checkbox">
-                        <input type="checkbox" id="api-show-private">
-                        Private
-                    </label>
-                    <label for="api-show-deprecated" class="checkbox">
-                        <input type="checkbox" id="api-show-deprecated">
-                        Deprecated
-                    </label>
-            
-                </form>
-            
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <div class="page-header">
-                            <h1>ECS</h1>
-                        </div>
-                        
-                        
-                        
-                        	<div class="well well-small">
-                                    Module: <a href="../modules/ecs.html">ecs</a>
-                            </div>
-                        
-                        
-                        
-                        
-                        <!-- table of contents -->
-                        
-                        <div id="class-toc" class="page-section">
-                        	<h2>Table of Contents</h2>
-                            <ul>
-                        		<li>
-                        			<strong>Methods</strong>
-                        			<ul>
-                        				<li><a href="#method-addEntity"><span class="im">addEntity</span>(<span class="ia">entity</span>)</a></li>
-                        				<li><a href="#method-addSystem"><span class="im">addSystem</span>(<span class="ia">system</span>)</a></li>
-                        				<li><a href="#method-cleanDirtyEntities"><span class="im">cleanDirtyEntities</span>()</a></li>
-                        				<li><a href="#method-removeEntity"><span class="im">removeEntity</span>(<span class="ia">entity</span>)</a></li>
-                        				<li><a href="#method-removeEntityById"><span class="im">removeEntityById</span>(<span class="ia">entityId</span>)</a></li>
-                        				<li><a href="#method-removeEntityIfDirty"><span class="im">removeEntityIfDirty</span>(<span class="ia">entity</span>)</a></li>
-                        				<li><a href="#method-removeSystem"><span class="im">removeSystem</span>(<span class="ia">system</span>)</a></li>
-                        				<li><a href="#method-update"><span class="im">update</span>()</a></li>
-                        			</ul>
-                        		</li>
-                        
-                        		<li>
-                        			<strong>Properties</strong>
-                        			<ul>
-                        				<li><a href="#prop-entities"><span class="ip">entities</span></a></li>
-                        				<li><a href="#prop-entitiesSystemsDirty"><span class="ip">entitiesSystemsDirty</span></a></li>
-                        				<li><a href="#prop-systems"><span class="ip">systems</span></a></li>
-                        				<li><a href="#prop-updateCounter"><span class="ip">updateCounter</span></a></li>
-                        			</ul>
-                        		</li>
-                        
-                        
-                        	</ul>
-                        </div>
-                        
-                        <!-- details -->
-                        
-                            <div class="constructor yuidoc-class-constructor page-section">
-                                <h2>Constructor</h2>
-                                <div class="item-list">
-                                <div id="method-ECS" class="method item">
-                                	<div class="method-signature">
-                                	<span class="name"><code>ECS</code></span>
-                                
-                                		<span class="paren">()</span>
-                                	</div>
-                                
-                                
-                                
-                                
-                                
-                                
-                                	<div class="meta">
-                                				<p>
-                                				Defined in
-                                		<a href="../files/yagl-ecs_src_ecs.js.html#l15"><code>yagl-ecs\src\ecs.js:15</code></a>
-                                		</p>
-                                
-                                
-                                
-                                	</div>
-                                
-                                
-                                
-                                
-                                </div>
-                                </div>
-                            </div>
-                        
-                            <div id="methods" class="page-section">
-                                <h2 class="off-left">Methods</h2>
-                                <div class="item-list">
-                                    <div id="method-addEntity" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>addEntity</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>entity</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_ecs.js.html#l52"><code>yagl-ecs\src\ecs.js:52</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Add an entity to the ecs.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">entity</code>
-                                    						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
-                                    
-                                    
-                                    					<div class="param-description"><p>The entity to add.</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    
-                                    </div>
-                                    <div id="method-addSystem" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>addSystem</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>system</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_ecs.js.html#l116"><code>yagl-ecs\src\ecs.js:116</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Add a system to the ecs.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">system</code>
-                                    						<span class="type"><a href="../classes/System.html" class="crosslink">System</a></span>
-                                    
-                                    
-                                    					<div class="param-description"><p>system to add</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    
-                                    </div>
-                                    <div id="method-cleanDirtyEntities" class="method item private">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>cleanDirtyEntities</code></span>
-                                    
-                                    		<span class="paren">()</span>
-                                    	</div>
-                                    
-                                    
-                                    		<span class="flag private">private</span>
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_ecs.js.html#l138"><code>yagl-ecs\src\ecs.js:138</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>"Clean" entities flagged as dirty by removing unecessary systems and
-                                    adding missing systems.</p>
-                                    </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                    <div id="method-removeEntity" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>removeEntity</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>entity</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    		<span class="returns-inline">
-                                    			<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
-                                    		</span>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_ecs.js.html#l62"><code>yagl-ecs\src\ecs.js:62</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Remove an entity from the ecs by reference.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">entity</code>
-                                    						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
-                                    
-                                    
-                                    					<div class="param-description"><p>reference of the entity to remove</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    		<div class="returns">
-                                    			<h4>Returns:</h4>
-                                    
-                                    			<div class="returns-description">
-                                    						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>:
-                                    					<p>the remove entity if any</p>
-                                    
-                                    			</div>
-                                    		</div>
-                                    
-                                    </div>
-                                    <div id="method-removeEntityById" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>removeEntityById</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>entityId</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    		<span class="returns-inline">
-                                    			<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
-                                    		</span>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_ecs.js.html#l84"><code>yagl-ecs\src\ecs.js:84</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Remove an entity from the ecs by entity id.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">entityId</code>
-                                    						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
-                                    
-                                    
-                                    					<div class="param-description"><p>id of the entity to remove</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    		<div class="returns">
-                                    			<h4>Returns:</h4>
-                                    
-                                    			<div class="returns-description">
-                                    						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>:
-                                    					<p>removed entity if any</p>
-                                    
-                                    			</div>
-                                    		</div>
-                                    
-                                    </div>
-                                    <div id="method-removeEntityIfDirty" class="method item private">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>removeEntityIfDirty</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>entity</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    	</div>
-                                    
-                                    
-                                    		<span class="flag private">private</span>
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_ecs.js.html#l102"><code>yagl-ecs\src\ecs.js:102</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Remove an entity from dirty entities by reference.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">entity</code>
-                                    						<span class="type">type</span>
-                                    
-                                    
-                                    					<div class="param-description"><p>entity to remove</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    
-                                    </div>
-                                    <div id="method-removeSystem" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>removeSystem</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>system</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_ecs.js.html#l125"><code>yagl-ecs\src\ecs.js:125</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Remove a system from the ecs.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">system</code>
-                                    						<span class="type"><a href="../classes/System.html" class="crosslink">System</a></span>
-                                    
-                                    
-                                    					<div class="param-description"><p>system reference</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    
-                                    </div>
-                                    <div id="method-update" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>update</code></span>
-                                    
-                                    		<span class="paren">()</span>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_ecs.js.html#l167"><code>yagl-ecs\src\ecs.js:167</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Update the ecs.</p>
-                                    </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div id="properties" class="page-section">
-                                <h2 class="off-left">Properties</h2>
-                        
-                                <div class="item-list">
-                                    <div id="prop-entities" class="property item">
-                                        <h3 class="name"><code>entities</code></h3>
-                                        <span class="type">Array</span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_ecs.js.html#l20"><code>yagl-ecs\src\ecs.js:20</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>Store all entities of the ECS.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                    <div id="prop-entitiesSystemsDirty" class="property item">
-                                        <h3 class="name"><code>entitiesSystemsDirty</code></h3>
-                                        <span class="type">Array</span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_ecs.js.html#l28"><code>yagl-ecs\src\ecs.js:28</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>Store entities which need to be tested at beginning of next tick.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                    <div id="prop-systems" class="property item">
-                                        <h3 class="name"><code>systems</code></h3>
-                                        <span class="type">Array</span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_ecs.js.html#l36"><code>yagl-ecs\src\ecs.js:36</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>Store all systems of the ECS.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                    <div id="prop-updateCounter" class="property item">
-                                        <h3 class="name"><code>updateCounter</code></h3>
-                                        <span class="type">Number</span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_ecs.js.html#l44"><code>yagl-ecs\src\ecs.js:44</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>Count how many updates have been done.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                        
-                        
-                        
+<div class="page-header">
+    <h1>ECS</h1>
+</div>
+
+
+
+	<div class="well well-small">
+            Module: <a href="../modules/ecs.html">ecs</a>
+    </div>
+
+
+
+
+<!-- table of contents -->
+
+<div id="class-toc" class="page-section">
+	<h2>Table of Contents</h2>
+    <ul>
+		<li>
+			<strong>Methods</strong>
+			<ul>
+				<li><a href="#method-addEntity"><span class="im">addEntity</span>(<span class="ia">entity</span>)</a></li>
+				<li><a href="#method-addSystem"><span class="im">addSystem</span>(<span class="ia">system</span>)</a></li>
+				<li><a href="#method-cleanDirtyEntities"><span class="im">cleanDirtyEntities</span>()</a></li>
+				<li><a href="#method-removeEntity"><span class="im">removeEntity</span>(<span class="ia">entity</span>)</a></li>
+				<li><a href="#method-removeEntityById"><span class="im">removeEntityById</span>(<span class="ia">entityId</span>)</a></li>
+				<li><a href="#method-removeEntityIfDirty"><span class="im">removeEntityIfDirty</span>(<span class="ia">entity</span>)</a></li>
+				<li><a href="#method-removeSystem"><span class="im">removeSystem</span>(<span class="ia">system</span>)</a></li>
+				<li><a href="#method-update"><span class="im">update</span>()</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<strong>Properties</strong>
+			<ul>
+				<li><a href="#prop-entities"><span class="ip">entities</span></a></li>
+				<li><a href="#prop-entitiesSystemsDirty"><span class="ip">entitiesSystemsDirty</span></a></li>
+				<li><a href="#prop-systems"><span class="ip">systems</span></a></li>
+				<li><a href="#prop-updateCounter"><span class="ip">updateCounter</span></a></li>
+			</ul>
+		</li>
+
+
+	</ul>
+</div>
+
+<!-- details -->
+
+    <div class="constructor yuidoc-class-constructor page-section">
+        <h2>Constructor</h2>
+        <div class="item-list">
+<div id="method-ECS" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>ECS</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_ecs.js.html#l16"><code>yagl-ecs\src\ecs.js:16</code></a>
+		</p>
+
+
+
+	</div>
+
+
+
+
+</div>
+        </div>
+    </div>
+
+    <div id="methods" class="page-section">
+        <h2 class="off-left">Methods</h2>
+        <div class="item-list">
+<div id="method-addEntity" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>addEntity</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>entity</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_ecs.js.html#l69"><code>yagl-ecs\src\ecs.js:69</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Add an entity to the ecs.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">entity</code>
+						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
+
+
+					<div class="param-description"><p>The entity to add.</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-addSystem" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>addSystem</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>system</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_ecs.js.html#l133"><code>yagl-ecs\src\ecs.js:133</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Add a system to the ecs.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">system</code>
+						<span class="type"><a href="../classes/System.html" class="crosslink">System</a></span>
+
+
+					<div class="param-description"><p>system to add</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-cleanDirtyEntities" class="method item private">
+	<div class="method-signature">
+	<span class="name"><code>cleanDirtyEntities</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_ecs.js.html#l163"><code>yagl-ecs\src\ecs.js:163</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>"Clean" entities flagged as dirty by removing unecessary systems and
+adding missing systems.</p>
+</div>
+
+
+
+</div>
+<div id="method-removeEntity" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>removeEntity</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>entity</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_ecs.js.html#l79"><code>yagl-ecs\src\ecs.js:79</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Remove an entity from the ecs by reference.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">entity</code>
+						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
+
+
+					<div class="param-description"><p>reference of the entity to remove</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>:
+					<p>the remove entity if any</p>
+
+			</div>
+		</div>
+
+</div>
+<div id="method-removeEntityById" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>removeEntityById</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>entityId</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+		<span class="returns-inline">
+			<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_ecs.js.html#l101"><code>yagl-ecs\src\ecs.js:101</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Remove an entity from the ecs by entity id.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">entityId</code>
+						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
+
+
+					<div class="param-description"><p>id of the entity to remove</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>:
+					<p>removed entity if any</p>
+
+			</div>
+		</div>
+
+</div>
+<div id="method-removeEntityIfDirty" class="method item private">
+	<div class="method-signature">
+	<span class="name"><code>removeEntityIfDirty</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>entity</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+		<span class="flag private">private</span>
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_ecs.js.html#l119"><code>yagl-ecs\src\ecs.js:119</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Remove an entity from dirty entities by reference.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">entity</code>
+						<span class="type">type</span>
+
+
+					<div class="param-description"><p>entity to remove</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-removeSystem" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>removeSystem</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>system</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_ecs.js.html#l149"><code>yagl-ecs\src\ecs.js:149</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Remove a system from the ecs.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">system</code>
+						<span class="type"><a href="../classes/System.html" class="crosslink">System</a></span>
+
+
+					<div class="param-description"><p>system reference</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-update" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>update</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_ecs.js.html#l195"><code>yagl-ecs\src\ecs.js:195</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Update the ecs.</p>
+</div>
+
+
+
+</div>
+        </div>
+    </div>
+
+    <div id="properties" class="page-section">
+        <h2 class="off-left">Properties</h2>
+
+        <div class="item-list">
+<div id="prop-entities" class="property item">
+    <h3 class="name"><code>entities</code></h3>
+    <span class="type">Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_ecs.js.html#l21"><code>yagl-ecs\src\ecs.js:21</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Store all entities of the ECS.</p>
+
+    </div>
+
+
+
+</div>
+<div id="prop-entitiesSystemsDirty" class="property item">
+    <h3 class="name"><code>entitiesSystemsDirty</code></h3>
+    <span class="type">Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_ecs.js.html#l29"><code>yagl-ecs\src\ecs.js:29</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Store entities which need to be tested at beginning of next tick.</p>
+
+    </div>
+
+
+
+</div>
+<div id="prop-systems" class="property item">
+    <h3 class="name"><code>systems</code></h3>
+    <span class="type">Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_ecs.js.html#l37"><code>yagl-ecs\src\ecs.js:37</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Store all systems of the ECS.</p>
+
+    </div>
+
+
+
+</div>
+<div id="prop-updateCounter" class="property item">
+    <h3 class="name"><code>updateCounter</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_ecs.js.html#l45"><code>yagl-ecs\src\ecs.js:45</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Count how many updates have been done.</p>
+
+    </div>
+
+
+
+</div>
+        </div>
+    </div>
+
+
+
                     </div>
                 </div>
             </div>

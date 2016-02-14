@@ -33,144 +33,152 @@
 <div class="container">
     <div class="row">
         <div class="span3">
-	    <div>
-	        <div id="sidebar">
-	        <div id="classes">
-	            <ul id="api-classes" class="nav nav-list">
-	                    <li><a href="../classes/TiledMap.html">TiledMap</a></li>
-	            </ul>
-	        </div>
-	        </div>
-	    </div>
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/TiledMap.html">TiledMap</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
         </div>
         <div class="span9">
-                <form id="options-form" class="form-inline pull-right">
-                    Show:
-                    <label for="api-show-inherited" class="checkbox">
-                        <input type="checkbox" id="api-show-inherited" checked>
-                        Inherited
-                    </label>
-            
-                    <label for="api-show-protected" class="checkbox">
-                        <input type="checkbox" id="api-show-protected">
-                        Protected
-                    </label>
-            
-                    <label for="api-show-private" class="checkbox">
-                        <input type="checkbox" id="api-show-private">
-                        Private
-                    </label>
-                    <label for="api-show-deprecated" class="checkbox">
-                        <input type="checkbox" id="api-show-deprecated">
-                        Deprecated
-                    </label>
-            
-                </form>
-            
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <div class="page-header">
-                            <h1>yagl-tiledmap\src\map.js <small>File</small></h1>
-                        </div>
-                        
-                        <div class="file">
-                            <pre class="prettyprint linenums">
-                        /**
-                         * @module tiledmap
-                         */
-                        
-                        /**
-                         * @class TiledMap
-                         * @constructor
-                         * @param {Number} sizeX     Number of horizontal tiles.
-                         * @param {Number} sizeY     Number of vertical tiles.
-                         * @param {Number} tileWidth Width/Height of a signle tile.
-                         */
-                        var Map = function (sizeX, sizeY, tileWidth) {
-                          this.size = {};
-                        
-                          this.size.x = sizeX;
-                          this.size.y = sizeY;
-                        
-                          this.tileWidth = tileWidth;
-                        
-                          this.autotiles = [];
-                        };
-                        
-                        Map.prototype.setTileset = function (img) {
-                          this.tileset = img;
-                        };
-                        
-                        Map.prototype.addAutotile = function (img) {
-                          var autotile = new Autotile(img, this.autotiles.length);
-                        
-                          autotile.compile();
-                        
-                          this.autotiles.push(autotile);
-                        };
-                        
-                        Map.prototype.drawTile = function (ctx, tile, x, y) {
-                          var xTileSource, yTileSource, xSource, ySource;
-                        
-                          xTileSource = tile % this.size.x;
-                        
-                          if (xTileSource === 0) {
-                            xTileSource = this.size.x;
-                          }
-                        
-                          yTileSource = Math.ceil(tile / this.size.x);
-                        
-                          xSource = (xTileSource - 1) * 32;
-                          ySource = (yTileSource - 1) * 32;
-                        
-                          ctx.drawImage(this.tileset, xSource, ySource, this.tileWidth, this.tileWidth,
-                            x, y, this.tileWidth, this.tileWidth);
-                        };
-                        
-                        Map.prototype.renderLayer = function (layer) {
-                          var canvas = document.createElement(&#x27;canvas&#x27;),
-                            ctx      = canvas.getContext(&#x27;2d&#x27;),
-                            width    = this.size.x * this.tileWidth,
-                            height   = this.size.y * this.tileWidth,
-                            img      = new Image(),
-                            tile     = null,
-                            offset   = null,
-                            dx       = null,
-                            dy       = null;
-                        
-                          canvas.width = width;
-                          canvas.height = height;
-                        
-                          for (var x = 0; x &lt; this.size.x; x += 1) {
-                            for (var y = 0; y &lt; this.size.y; y += 1) {
-                              tile = layer[y * this.size.x + x];
-                        
-                              dx = x * this.tileWidth;
-                              dy = y * this.tileWidth;
-                        
-                              if (tile &gt; 0) {
-                                this.drawTile(ctx, tile, dx, dy);
-                              } else {
-                                tile = -tile;
-                        
-                                offset = Math.floor((tile - 1) / 256);
-                        
-                                if (!this.autotiles[offset]) {
-                                  continue;
-                                }
-                        
-                                tile = (tile - 1) % 256;
-                        
-                                this.autotiles[offset].drawTile(ctx, tile, dx, dy);
-                              }
-                            }
-                          }
-                        
-                          return canvas;
-                        };
-                            </pre>
-                        </div>
+<div class="page-header">
+    <h1>yagl-tiledmap\src\map.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+/**
+ * @module tiledmap
+ */
+
+/**
+ * @class TiledMap
+ * @constructor
+ * @param {Number} sizeX     Number of horizontal tiles.
+ * @param {Number} sizeY     Number of vertical tiles.
+ * @param {Number} tileWidth Width/Height of a signle tile.
+ */
+var Map = function (sizeX, sizeY, tileWidth) {
+  this.size = {};
+
+  this.size.x = sizeX;
+  this.size.y = sizeY;
+  this.bufferSize = sizeX * sizeY * 4;
+
+  this.tileWidth = tileWidth;
+
+  this.autotiles = [];
+};
+
+Map.prototype.setTileset = function (img) {
+  this.tileset = img;
+};
+
+Map.prototype.addAutotile = function (img) {
+  var autotile = new Autotile(img, this.autotiles.length);
+
+  autotile.compile();
+
+  this.autotiles.push(autotile);
+};
+
+Map.prototype.drawTile = function (ctx, tile, x, y) {
+  var xTileSource, yTileSource, xSource, ySource;
+
+  xTileSource = tile % this.size.x;
+
+  if (xTileSource === 0) {
+    xTileSource = this.size.x;
+  }
+
+  yTileSource = Math.ceil(tile / this.size.x);
+
+  xSource = (xTileSource - 1) * 32;
+  ySource = (yTileSource - 1) * 32;
+
+  ctx.drawImage(this.tileset, xSource, ySource, this.tileWidth, this.tileWidth,
+    x, y, this.tileWidth, this.tileWidth);
+};
+
+Map.prototype.renderLayer = function (layer) {
+  return this.renderFragment(layer, this.size.x);
+};
+
+Map.prototype.renderFragment = function (fragment, fragmentWidth) {
+  var fragmentHeight = Math.ceil(fragment.length / fragmentWidth);
+  var canvas = document.createElement(&#x27;canvas&#x27;),
+    ctx      = canvas.getContext(&#x27;2d&#x27;),
+    width    = fragmentWidth * this.tileWidth,
+    height   = fragmentHeight * this.tileWidth,
+    img      = new Image(),
+    tile     = null,
+    offset   = null,
+    dx       = null,
+    dy       = null;
+
+
+  canvas.width = width;
+  canvas.height = height;
+
+  for (var x = 0; x &lt; fragmentWidth; x += 1) {
+    for (var y = 0; y &lt; fragmentHeight; y += 1) {
+      tile = fragment[y * fragmentWidth + x];
+
+      dx = x * this.tileWidth;
+      dy = y * this.tileWidth;
+
+      if (tile &gt; 0) {
+        this.drawTile(ctx, tile, dx, dy);
+      } else {
+        tile = -tile;
+
+        offset = Math.floor((tile - 1) / 256);
+
+        if (!this.autotiles[offset]) {
+          continue;
+        }
+
+        tile = (tile - 1) % 256;
+
+        this.autotiles[offset].drawTile(ctx, tile, dx, dy);
+      }
+    }
+  }
+
+  return canvas;
+};
+
+    </pre>
+</div>
                     </div>
                 </div>
             </div>

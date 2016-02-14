@@ -57,7 +57,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 15
+            "line": 16
         },
         "uid": {
             "name": "uid",
@@ -118,7 +118,7 @@
             "namespace": "",
             "file": "yagl-ecs\\src\\System.js",
             "line": 15,
-            "description": "A system update all eligible entities at a given frequency. \nThis class is not meant to be used directly and should be sub-classed to \ndefine specific logic.",
+            "description": "A system update all eligible entities at a given frequency.\nThis class is not meant to be used directly and should be sub-classed to\ndefine specific logic.",
             "is_constructor": 1,
             "params": [
                 {
@@ -141,7 +141,7 @@
             "module": "ecs",
             "namespace": "",
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 15,
+            "line": 16,
             "is_constructor": 1
         },
         "UIDGenerator": {
@@ -252,14 +252,14 @@
         },
         {
             "file": "yagl-ecs\\src\\Entity.js",
-            "line": 99,
+            "line": 100,
             "description": "Set the systems dirty flag so the ECS knows this entity \nneeds to recompute eligibility at the beginning of next \ntick.",
             "class": "Entity",
             "module": "ecs"
         },
         {
             "file": "yagl-ecs\\src\\Entity.js",
-            "line": 112,
+            "line": 113,
             "description": "Add a system to the entity.",
             "access": "private",
             "tagname": "",
@@ -275,7 +275,7 @@
         },
         {
             "file": "yagl-ecs\\src\\Entity.js",
-            "line": 121,
+            "line": 122,
             "description": "Remove a system from the entity.",
             "access": "private",
             "tagname": "",
@@ -291,7 +291,7 @@
         },
         {
             "file": "yagl-ecs\\src\\Entity.js",
-            "line": 134,
+            "line": 135,
             "description": "Add a component to the entity. WARNING this method does not copy\ncomponents data but assign directly the reference for maximum\nperformances. Be sure not to pass the same component reference to\nmany entities.",
             "params": [
                 {
@@ -310,7 +310,7 @@
         },
         {
             "file": "yagl-ecs\\src\\Entity.js",
-            "line": 147,
+            "line": 148,
             "description": "Remove a component from the entity. To preserve performances, we \nsimple set the component property to `undefined`. Therefore the \nproperty is still enumerable after a call to removeComponent()",
             "params": [
                 {
@@ -324,7 +324,7 @@
         },
         {
             "file": "yagl-ecs\\src\\Entity.js",
-            "line": 162,
+            "line": 163,
             "description": "Update a component field by field, NOT recursively. If the component\ndoes not exists, this method create it silently.",
             "itemtype": "method",
             "name": "updateComponent",
@@ -348,7 +348,7 @@
         },
         {
             "file": "yagl-ecs\\src\\Entity.js",
-            "line": 188,
+            "line": 189,
             "description": "Update a set of components.",
             "params": [
                 {
@@ -362,7 +362,7 @@
         },
         {
             "file": "yagl-ecs\\src\\Entity.js",
-            "line": 200,
+            "line": 201,
             "description": "Dispose the entity.",
             "access": "private",
             "tagname": "",
@@ -428,7 +428,34 @@
         },
         {
             "file": "yagl-ecs\\src\\System.js",
-            "line": 73,
+            "line": 76,
+            "description": "dispose the system by exiting all the entities",
+            "itemtype": "method",
+            "name": "dispose",
+            "class": "System",
+            "module": "ecs"
+        },
+        {
+            "file": "yagl-ecs\\src\\System.js",
+            "line": 88,
+            "description": "Abstract method to subclass. Called once per update, before entities\niteration.",
+            "itemtype": "method",
+            "name": "preUpdate",
+            "class": "System",
+            "module": "ecs"
+        },
+        {
+            "file": "yagl-ecs\\src\\System.js",
+            "line": 95,
+            "description": "Abstract method to subclass. Called once per update, after entities\niteration.",
+            "itemtype": "method",
+            "name": "postUpdate",
+            "class": "System",
+            "module": "ecs"
+        },
+        {
+            "file": "yagl-ecs\\src\\System.js",
+            "line": 102,
             "description": "Abstract method to subclass. Should return true if the entity is eligible\nto the system, false otherwise.",
             "itemtype": "method",
             "name": "test",
@@ -444,7 +471,7 @@
         },
         {
             "file": "yagl-ecs\\src\\System.js",
-            "line": 83,
+            "line": 112,
             "description": "Abstract method to subclass. Called when an entity is added to the system.",
             "itemtype": "method",
             "name": "enter",
@@ -460,7 +487,7 @@
         },
         {
             "file": "yagl-ecs\\src\\System.js",
-            "line": 90,
+            "line": 119,
             "description": "Abstract method to subclass. Called when an entity is removed from the system.",
             "itemtype": "method",
             "name": "exit",
@@ -476,8 +503,8 @@
         },
         {
             "file": "yagl-ecs\\src\\System.js",
-            "line": 97,
-            "description": "Abstract method to subclass. Called for each entity to update. This is \nthe only method that should actual mutate entity state.",
+            "line": 126,
+            "description": "Abstract method to subclass. Called for each entity to update. This is\nthe only method that should actual mutate entity state.",
             "itemtype": "method",
             "name": "update",
             "params": [
@@ -492,7 +519,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 20,
+            "line": 21,
             "description": "Store all entities of the ECS.",
             "itemtype": "property",
             "name": "entities",
@@ -502,7 +529,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 28,
+            "line": 29,
             "description": "Store entities which need to be tested at beginning of next tick.",
             "itemtype": "property",
             "name": "entitiesSystemsDirty",
@@ -512,7 +539,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 36,
+            "line": 37,
             "description": "Store all systems of the ECS.",
             "itemtype": "property",
             "name": "systems",
@@ -522,7 +549,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 44,
+            "line": 45,
             "description": "Count how many updates have been done.",
             "itemtype": "property",
             "name": "updateCounter",
@@ -532,7 +559,25 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 52,
+            "line": 55,
+            "description": "Retrieve an entity by id",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "id of the entity to retrieve",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The entity if found null otherwise",
+                "type": "Entity"
+            },
+            "class": "ECS",
+            "module": "ecs"
+        },
+        {
+            "file": "yagl-ecs\\src\\ecs.js",
+            "line": 69,
             "description": "Add an entity to the ecs.",
             "itemtype": "method",
             "name": "addEntity",
@@ -548,7 +593,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 62,
+            "line": 79,
             "description": "Remove an entity from the ecs by reference.",
             "itemtype": "method",
             "name": "removeEntity",
@@ -568,7 +613,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 84,
+            "line": 101,
             "description": "Remove an entity from the ecs by entity id.",
             "itemtype": "method",
             "name": "removeEntityById",
@@ -588,7 +633,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 102,
+            "line": 119,
             "description": "Remove an entity from dirty entities by reference.",
             "access": "private",
             "tagname": "",
@@ -606,7 +651,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 116,
+            "line": 133,
             "description": "Add a system to the ecs.",
             "itemtype": "method",
             "name": "addSystem",
@@ -622,7 +667,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 125,
+            "line": 149,
             "description": "Remove a system from the ecs.",
             "itemtype": "method",
             "name": "removeSystem",
@@ -638,7 +683,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 138,
+            "line": 163,
             "description": "\"Clean\" entities flagged as dirty by removing unecessary systems and\nadding missing systems.",
             "access": "private",
             "tagname": "",
@@ -649,7 +694,7 @@
         },
         {
             "file": "yagl-ecs\\src\\ecs.js",
-            "line": 167,
+            "line": 195,
             "description": "Update the ecs.",
             "itemtype": "method",
             "name": "update",
@@ -710,6 +755,29 @@
         {
             "file": "yagl-ecs\\src\\uid.js",
             "line": 97,
+            "description": "Return true if the entity id was salted by given salt",
+            "params": [
+                {
+                    "name": "entityId",
+                    "description": "Entity id to test",
+                    "type": "String"
+                },
+                {
+                    "name": "salt",
+                    "description": "Salt to test",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "true if the id was generated by the salt, false\notherwise",
+                "type": "Boolean"
+            },
+            "class": "UID",
+            "module": "uid"
+        },
+        {
+            "file": "yagl-ecs\\src\\uid.js",
+            "line": 106,
             "description": "Return the next unique salt.",
             "itemtype": "method",
             "name": "nextSalt",
@@ -722,7 +790,7 @@
         },
         {
             "file": "yagl-ecs\\src\\uid.js",
-            "line": 114,
+            "line": 123,
             "description": "Create a new generator with unique salt.",
             "itemtype": "method",
             "name": "nextGenerator",
@@ -741,31 +809,31 @@
         },
         {
             "message": "Missing item type\nSet the systems dirty flag so the ECS knows this entity \nneeds to recompute eligibility at the beginning of next \ntick.",
-            "line": " yagl-ecs\\src\\Entity.js:99"
+            "line": " yagl-ecs\\src\\Entity.js:100"
         },
         {
             "message": "Missing item type\nAdd a system to the entity.",
-            "line": " yagl-ecs\\src\\Entity.js:112"
+            "line": " yagl-ecs\\src\\Entity.js:113"
         },
         {
             "message": "Missing item type\nRemove a system from the entity.",
-            "line": " yagl-ecs\\src\\Entity.js:121"
+            "line": " yagl-ecs\\src\\Entity.js:122"
         },
         {
             "message": "Missing item type\nAdd a component to the entity. WARNING this method does not copy\ncomponents data but assign directly the reference for maximum\nperformances. Be sure not to pass the same component reference to\nmany entities.",
-            "line": " yagl-ecs\\src\\Entity.js:134"
+            "line": " yagl-ecs\\src\\Entity.js:135"
         },
         {
             "message": "Missing item type\nRemove a component from the entity. To preserve performances, we \nsimple set the component property to `undefined`. Therefore the \nproperty is still enumerable after a call to removeComponent()",
-            "line": " yagl-ecs\\src\\Entity.js:147"
+            "line": " yagl-ecs\\src\\Entity.js:148"
         },
         {
             "message": "Missing item type\nUpdate a set of components.",
-            "line": " yagl-ecs\\src\\Entity.js:188"
+            "line": " yagl-ecs\\src\\Entity.js:189"
         },
         {
             "message": "Missing item type\nDispose the entity.",
-            "line": " yagl-ecs\\src\\Entity.js:200"
+            "line": " yagl-ecs\\src\\Entity.js:201"
         },
         {
             "message": "Missing item type\nAdd an entity to the system entities.",
@@ -776,8 +844,16 @@
             "line": " yagl-ecs\\src\\System.js:46"
         },
         {
+            "message": "Missing item type\nRetrieve an entity by id",
+            "line": " yagl-ecs\\src\\ecs.js:55"
+        },
+        {
             "message": "Missing item type\nCreate a new unique id.",
             "line": " yagl-ecs\\src\\uid.js:63"
+        },
+        {
+            "message": "Missing item type\nReturn true if the entity id was salted by given salt",
+            "line": " yagl-ecs\\src\\uid.js:97"
         }
     ]
 }

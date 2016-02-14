@@ -33,442 +33,531 @@
 <div class="container">
     <div class="row">
         <div class="span3">
-	    <div>
-	        <div id="sidebar">
-	        <div id="classes">
-	            <ul id="api-classes" class="nav nav-list">
-	                    <li><a href="../classes/ECS.html">ECS</a></li>
-	                    <li><a href="../classes/Entity.html">Entity</a></li>
-	                    <li><a href="../classes/System.html">System</a></li>
-	                    <li><a href="../classes/UID.html">UID</a></li>
-	                    <li><a href="../classes/UIDGenerator.html">UIDGenerator</a></li>
-	            </ul>
-	        </div>
-	        </div>
-	    </div>
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/ECS.html">ECS</a></li>
+                <li><a href="../classes/Entity.html">Entity</a></li>
+                <li><a href="../classes/System.html">System</a></li>
+                <li><a href="../classes/UID.html">UID</a></li>
+                <li><a href="../classes/UIDGenerator.html">UIDGenerator</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
         </div>
         <div class="span9">
-                <form id="options-form" class="form-inline pull-right">
-                    Show:
-                    <label for="api-show-inherited" class="checkbox">
-                        <input type="checkbox" id="api-show-inherited" checked>
-                        Inherited
-                    </label>
-            
-                    <label for="api-show-protected" class="checkbox">
-                        <input type="checkbox" id="api-show-protected">
-                        Protected
-                    </label>
-            
-                    <label for="api-show-private" class="checkbox">
-                        <input type="checkbox" id="api-show-private">
-                        Private
-                    </label>
-                    <label for="api-show-deprecated" class="checkbox">
-                        <input type="checkbox" id="api-show-deprecated">
-                        Deprecated
-                    </label>
-            
-                </form>
-            
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <div class="page-header">
-                            <h1>System</h1>
-                        </div>
-                        
-                        
-                        
-                        	<div class="well well-small">
-                                    Module: <a href="../modules/ecs.html">ecs</a>
-                            </div>
-                        
-                        
-                        
-                        <div class="yuidoc-class-description">
-                        <p>A system update all eligible entities at a given frequency.
-                        This class is not meant to be used directly and should be sub-classed to
-                        define specific logic.</p>
-                        
-                        </div>
-                        
-                        <!-- table of contents -->
-                        
-                        <div id="class-toc" class="page-section">
-                        	<h2>Table of Contents</h2>
-                            <ul>
-                        		<li>
-                        			<strong>Methods</strong>
-                        			<ul>
-                        				<li><a href="#method-enter"><span class="im">enter</span>(<span class="ia">entity</span>)</a></li>
-                        				<li><a href="#method-exit"><span class="im">exit</span>(<span class="ia">entity</span>)</a></li>
-                        				<li><a href="#method-test"><span class="im">test</span>(<span class="ia">entity</span>)</a></li>
-                        				<li><a href="#method-update"><span class="im">update</span>(<span class="ia">entity</span>)</a></li>
-                        				<li><a href="#method-updateAll"><span class="im">updateAll</span>()</a></li>
-                        			</ul>
-                        		</li>
-                        
-                        		<li>
-                        			<strong>Properties</strong>
-                        			<ul>
-                        				<li><a href="#prop-entities"><span class="ip">entities</span></a></li>
-                        				<li><a href="#prop-frequency"><span class="ip">frequency</span></a></li>
-                        			</ul>
-                        		</li>
-                        
-                        
-                        	</ul>
-                        </div>
-                        
-                        <!-- details -->
-                        
-                            <div class="constructor yuidoc-class-constructor page-section">
-                                <h2>Constructor</h2>
-                                <div class="item-list">
-                                <div id="method-System" class="method item">
-                                	<div class="method-signature">
-                                	<span class="name"><code>System</code></span>
-                                
-                                		<div class="args">
-                                			<span class="paren">(</span><ul class="args-list inline commas">
-                                				<li class="arg">
-                                						<code class="optional">frequency=1</code>
-                                				</li>
-                                			</ul><span class="paren">)</span>
-                                		</div>
-                                	</div>
-                                
-                                
-                                
-                                
-                                
-                                
-                                	<div class="meta">
-                                				<p>
-                                				Defined in
-                                		<a href="../files/yagl-ecs_src_System.js.html#l15"><code>yagl-ecs\src\System.js:15</code></a>
-                                		</p>
-                                
-                                
-                                
-                                	</div>
-                                
-                                
-                                		<div class="params">
-                                			<h4>Parameters:</h4>
-                                
-                                			<ul class="params-list">
-                                				<li class="param">
-                                						<code class="param-name optional">[frequency=1]</code>
-                                						<span class="type">Number</span>
-                                						<span class="flag optional" title="This parameter is optional.">optional</span>
-                                
-                                
-                                					<div class="param-description"><p>Frequency of execution.</p>
-                                </div>
-                                
-                                				</li>
-                                			</ul>
-                                		</div>
-                                
-                                
-                                </div>
-                                </div>
-                            </div>
-                        
-                            <div id="methods" class="page-section">
-                                <h2 class="off-left">Methods</h2>
-                                <div class="item-list">
-                                    <div id="method-enter" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>enter</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>entity</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_System.js.html#l83"><code>yagl-ecs\src\System.js:83</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Abstract method to subclass. Called when an entity is added to the system.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">entity</code>
-                                    						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
-                                    
-                                    
-                                    					<div class="param-description"><p>The added entity.</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    
-                                    </div>
-                                    <div id="method-exit" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>exit</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>entity</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_System.js.html#l90"><code>yagl-ecs\src\System.js:90</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Abstract method to subclass. Called when an entity is removed from the system.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">entity</code>
-                                    						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
-                                    
-                                    
-                                    					<div class="param-description"><p>The removed entity.</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    
-                                    </div>
-                                    <div id="method-test" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>test</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>entity</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_System.js.html#l73"><code>yagl-ecs\src\System.js:73</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Abstract method to subclass. Should return true if the entity is eligible
-                                    to the system, false otherwise.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">entity</code>
-                                    						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
-                                    
-                                    
-                                    					<div class="param-description"><p>The entity to test.</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    
-                                    </div>
-                                    <div id="method-update" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>update</code></span>
-                                    
-                                    		<div class="args">
-                                    			<span class="paren">(</span><ul class="args-list inline commas">
-                                    				<li class="arg">
-                                    						<code>entity</code>
-                                    				</li>
-                                    			</ul><span class="paren">)</span>
-                                    		</div>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_System.js.html#l97"><code>yagl-ecs\src\System.js:97</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Abstract method to subclass. Called for each entity to update. This is
-                                    the only method that should actual mutate entity state.</p>
-                                    </div>
-                                    
-                                    		<div class="params">
-                                    			<h4>Parameters:</h4>
-                                    
-                                    			<ul class="params-list">
-                                    				<li class="param">
-                                    						<code class="param-name">entity</code>
-                                    						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
-                                    
-                                    
-                                    					<div class="param-description"><p>The entity to update.</p>
-                                    </div>
-                                    
-                                    				</li>
-                                    			</ul>
-                                    		</div>
-                                    
-                                    
-                                    </div>
-                                    <div id="method-updateAll" class="method item">
-                                    	<div class="method-signature">
-                                    	<span class="name"><code>updateAll</code></span>
-                                    
-                                    		<span class="paren">()</span>
-                                    	</div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    	<div class="meta">
-                                    				<p>
-                                    				Defined in
-                                    		<a href="../files/yagl-ecs_src_System.js.html#l62"><code>yagl-ecs\src\System.js:62</code></a>
-                                    		</p>
-                                    
-                                    
-                                    
-                                    	</div>
-                                    
-                                    	<div class="description"><p>Apply update to each entity of this system.</p>
-                                    </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                        
-                            <div id="properties" class="page-section">
-                                <h2 class="off-left">Properties</h2>
-                        
-                                <div class="item-list">
-                                    <div id="prop-entities" class="property item">
-                                        <h3 class="name"><code>entities</code></h3>
-                                        <span class="type">ArrayEntity</span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_System.js.html#l28"><code>yagl-ecs\src\System.js:28</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>Entities of the system.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                    <div id="prop-frequency" class="property item">
-                                        <h3 class="name"><code>frequency</code></h3>
-                                        <span class="type">Number</span>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                        <div class="meta">
-                                                    <p>
-                                                    Defined in
-                                            <a href="../files/yagl-ecs_src_System.js.html#l21"><code>yagl-ecs\src\System.js:21</code></a>
-                                            </p>
-                                    
-                                    
-                                        </div>
-                                    
-                                        <div class="description">
-                                            <p>Frequency of update execution, a frequency of <code>1</code> run the system every
-                                    update, <code>2</code> will run the system every 2 updates, ect.</p>
-                                    
-                                        </div>
-                                    
-                                    
-                                    
-                                    </div>
-                                </div>
-                            </div>
-                        
-                        
-                        
+<div class="page-header">
+    <h1>System</h1>
+</div>
+
+
+
+	<div class="well well-small">
+            Module: <a href="../modules/ecs.html">ecs</a>
+    </div>
+
+
+
+<div class="yuidoc-class-description">
+<p>A system update all eligible entities at a given frequency.
+This class is not meant to be used directly and should be sub-classed to
+define specific logic.</p>
+
+</div>
+
+<!-- table of contents -->
+
+<div id="class-toc" class="page-section">
+	<h2>Table of Contents</h2>
+    <ul>
+		<li>
+			<strong>Methods</strong>
+			<ul>
+				<li><a href="#method-dispose"><span class="im">dispose</span>()</a></li>
+				<li><a href="#method-enter"><span class="im">enter</span>(<span class="ia">entity</span>)</a></li>
+				<li><a href="#method-exit"><span class="im">exit</span>(<span class="ia">entity</span>)</a></li>
+				<li><a href="#method-postUpdate"><span class="im">postUpdate</span>()</a></li>
+				<li><a href="#method-preUpdate"><span class="im">preUpdate</span>()</a></li>
+				<li><a href="#method-test"><span class="im">test</span>(<span class="ia">entity</span>)</a></li>
+				<li><a href="#method-update"><span class="im">update</span>(<span class="ia">entity</span>)</a></li>
+				<li><a href="#method-updateAll"><span class="im">updateAll</span>()</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<strong>Properties</strong>
+			<ul>
+				<li><a href="#prop-entities"><span class="ip">entities</span></a></li>
+				<li><a href="#prop-frequency"><span class="ip">frequency</span></a></li>
+			</ul>
+		</li>
+
+
+	</ul>
+</div>
+
+<!-- details -->
+
+    <div class="constructor yuidoc-class-constructor page-section">
+        <h2>Constructor</h2>
+        <div class="item-list">
+<div id="method-System" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>System</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code class="optional">frequency=1</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_System.js.html#l15"><code>yagl-ecs\src\System.js:15</code></a>
+		</p>
+
+
+
+	</div>
+
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name optional">[frequency=1]</code>
+						<span class="type">Number</span>
+						<span class="flag optional" title="This parameter is optional.">optional</span>
+
+
+					<div class="param-description"><p>Frequency of execution.</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+        </div>
+    </div>
+
+    <div id="methods" class="page-section">
+        <h2 class="off-left">Methods</h2>
+        <div class="item-list">
+<div id="method-dispose" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>dispose</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_System.js.html#l76"><code>yagl-ecs\src\System.js:76</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>dispose the system by exiting all the entities</p>
+</div>
+
+
+
+</div>
+<div id="method-enter" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>enter</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>entity</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_System.js.html#l112"><code>yagl-ecs\src\System.js:112</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Abstract method to subclass. Called when an entity is added to the system.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">entity</code>
+						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
+
+
+					<div class="param-description"><p>The added entity.</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-exit" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>exit</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>entity</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_System.js.html#l119"><code>yagl-ecs\src\System.js:119</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Abstract method to subclass. Called when an entity is removed from the system.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">entity</code>
+						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
+
+
+					<div class="param-description"><p>The removed entity.</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-postUpdate" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>postUpdate</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_System.js.html#l95"><code>yagl-ecs\src\System.js:95</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Abstract method to subclass. Called once per update, after entities
+iteration.</p>
+</div>
+
+
+
+</div>
+<div id="method-preUpdate" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>preUpdate</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_System.js.html#l88"><code>yagl-ecs\src\System.js:88</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Abstract method to subclass. Called once per update, before entities
+iteration.</p>
+</div>
+
+
+
+</div>
+<div id="method-test" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>test</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>entity</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_System.js.html#l102"><code>yagl-ecs\src\System.js:102</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Abstract method to subclass. Should return true if the entity is eligible
+to the system, false otherwise.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">entity</code>
+						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
+
+
+					<div class="param-description"><p>The entity to test.</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-update" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>update</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>entity</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_System.js.html#l126"><code>yagl-ecs\src\System.js:126</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Abstract method to subclass. Called for each entity to update. This is
+the only method that should actual mutate entity state.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">entity</code>
+						<span class="type"><a href="../classes/Entity.html" class="crosslink">Entity</a></span>
+
+
+					<div class="param-description"><p>The entity to update.</p>
+</div>
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+<div id="method-updateAll" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>updateAll</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/yagl-ecs_src_System.js.html#l62"><code>yagl-ecs\src\System.js:62</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Apply update to each entity of this system.</p>
+</div>
+
+
+
+</div>
+        </div>
+    </div>
+
+    <div id="properties" class="page-section">
+        <h2 class="off-left">Properties</h2>
+
+        <div class="item-list">
+<div id="prop-entities" class="property item">
+    <h3 class="name"><code>entities</code></h3>
+    <span class="type">ArrayEntity</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_System.js.html#l28"><code>yagl-ecs\src\System.js:28</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Entities of the system.</p>
+
+    </div>
+
+
+
+</div>
+<div id="prop-frequency" class="property item">
+    <h3 class="name"><code>frequency</code></h3>
+    <span class="type">Number</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/yagl-ecs_src_System.js.html#l21"><code>yagl-ecs\src\System.js:21</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Frequency of update execution, a frequency of <code>1</code> run the system every
+update, <code>2</code> will run the system every 2 updates, ect.</p>
+
+    </div>
+
+
+
+</div>
+        </div>
+    </div>
+
+
+
                     </div>
                 </div>
             </div>

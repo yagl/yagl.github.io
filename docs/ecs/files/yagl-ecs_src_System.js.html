@@ -33,163 +33,193 @@
 <div class="container">
     <div class="row">
         <div class="span3">
-	    <div>
-	        <div id="sidebar">
-	        <div id="classes">
-	            <ul id="api-classes" class="nav nav-list">
-	                    <li><a href="../classes/ECS.html">ECS</a></li>
-	                    <li><a href="../classes/Entity.html">Entity</a></li>
-	                    <li><a href="../classes/System.html">System</a></li>
-	                    <li><a href="../classes/UID.html">UID</a></li>
-	                    <li><a href="../classes/UIDGenerator.html">UIDGenerator</a></li>
-	            </ul>
-	        </div>
-	        </div>
-	    </div>
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/ECS.html">ECS</a></li>
+                <li><a href="../classes/Entity.html">Entity</a></li>
+                <li><a href="../classes/System.html">System</a></li>
+                <li><a href="../classes/UID.html">UID</a></li>
+                <li><a href="../classes/UIDGenerator.html">UIDGenerator</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
         </div>
         <div class="span9">
-                <form id="options-form" class="form-inline pull-right">
-                    Show:
-                    <label for="api-show-inherited" class="checkbox">
-                        <input type="checkbox" id="api-show-inherited" checked>
-                        Inherited
-                    </label>
-            
-                    <label for="api-show-protected" class="checkbox">
-                        <input type="checkbox" id="api-show-protected">
-                        Protected
-                    </label>
-            
-                    <label for="api-show-private" class="checkbox">
-                        <input type="checkbox" id="api-show-private">
-                        Private
-                    </label>
-                    <label for="api-show-deprecated" class="checkbox">
-                        <input type="checkbox" id="api-show-deprecated">
-                        Deprecated
-                    </label>
-            
-                </form>
-            
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <div class="page-header">
-                            <h1>yagl-ecs\src\System.js <small>File</small></h1>
-                        </div>
-                        
-                        <div class="file">
-                            <pre class="prettyprint linenums">
-                        /**
-                         * @module  ecs
-                         */
-                        
-                        // forced to disable this check for abstract methods
-                        // jshint unused:false
-                        /**
-                         * @class  System
-                         *
-                         * @description  A system update all eligible entities at a given frequency. 
-                         * This class is not meant to be used directly and should be sub-classed to 
-                         * define specific logic.
-                         */
-                        class System {
-                          /**
-                           * @class  System
-                           * @constructor
-                           * @param [frequency=1] {Number} Frequency of execution.
-                           */
-                          constructor(frequency=1) {
-                            /**
-                             * Frequency of update execution, a frequency of &#x60;1&#x60; run the system every
-                             * update, &#x60;2&#x60; will run the system every 2 updates, ect.
-                             * @property {Number} frequency
-                             */
-                            this.frequency = frequency;
-                        
-                            /**
-                             * Entities of the system.
-                             * 
-                             * @property {Array[Entity]} entities
-                             */
-                            this.entities = [];
-                          }
-                          /**
-                           * Add an entity to the system entities.
-                           * 
-                           * @param {Entity} entity The entity to add to the system.
-                           */
-                          addEntity(entity) {
-                            entity.addSystem(this);
-                            this.entities.push(entity);
-                        
-                            this.enter(entity);
-                          }
-                          /**
-                           * Remove an entity from the system entities. exit() handler is executed
-                           * only if the entity actually exists in the system entities.
-                           * 
-                           * @param  {Entity} entity Reference of the entity to remove.
-                           */
-                          removeEntity(entity) {
-                            let index = this.entities.indexOf(entity);
-                        
-                            if (index !== -1) {
-                              entity.removeSystem(this);
-                              this.entities.splice(index, 1);
-                        
-                              this.exit(entity);
-                            }
-                          }
-                          /**
-                           * Apply update to each entity of this system.
-                           *
-                           * @method  updateAll
-                           */
-                          updateAll() {
-                            for (var i = 0, entity; entity = this.entities[i]; i += 1) {
-                              this.update(entity);
-                            }
-                          }
-                          // methods to be extended by subclasses
-                          /**
-                           * Abstract method to subclass. Should return true if the entity is eligible
-                           * to the system, false otherwise.
-                           *
-                           * @method  test
-                           * @param  {Entity} entity The entity to test.
-                           */
-                          test(entity) {
-                            return false;
-                          }
-                          /**
-                           * Abstract method to subclass. Called when an entity is added to the system.
-                           *
-                           * @method  enter
-                           * @param  {Entity} entity The added entity.
-                           */
-                          enter(entity) {}
-                          /**
-                           * Abstract method to subclass. Called when an entity is removed from the system.
-                           *
-                           * @method  exit
-                           * @param  {Entity} entity The removed entity.
-                           */
-                          exit(entity) {}
-                          /**
-                           * Abstract method to subclass. Called for each entity to update. This is 
-                           * the only method that should actual mutate entity state.
-                           * 
-                           * @method  update
-                           * @param  {Entity} entity The entity to update.
-                           */
-                          update(entity) {}
-                        }
-                        // jshint unused:true
-                        
-                        export default System;
-                            </pre>
-                        </div>
+<div class="page-header">
+    <h1>yagl-ecs\src\System.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums">
+/**
+ * @module  ecs
+ */
+
+// forced to disable this check for abstract methods
+// jshint unused:false
+/**
+ * @class  System
+ *
+ * @description  A system update all eligible entities at a given frequency.
+ * This class is not meant to be used directly and should be sub-classed to
+ * define specific logic.
+ */
+class System {
+  /**
+   * @class  System
+   * @constructor
+   * @param [frequency=1] {Number} Frequency of execution.
+   */
+  constructor(frequency=1) {
+    /**
+     * Frequency of update execution, a frequency of &#x60;1&#x60; run the system every
+     * update, &#x60;2&#x60; will run the system every 2 updates, ect.
+     * @property {Number} frequency
+     */
+    this.frequency = frequency;
+
+    /**
+     * Entities of the system.
+     *
+     * @property {Array[Entity]} entities
+     */
+    this.entities = [];
+  }
+  /**
+   * Add an entity to the system entities.
+   *
+   * @param {Entity} entity The entity to add to the system.
+   */
+  addEntity(entity) {
+    entity.addSystem(this);
+    this.entities.push(entity);
+
+    this.enter(entity);
+  }
+  /**
+   * Remove an entity from the system entities. exit() handler is executed
+   * only if the entity actually exists in the system entities.
+   *
+   * @param  {Entity} entity Reference of the entity to remove.
+   */
+  removeEntity(entity) {
+    let index = this.entities.indexOf(entity);
+
+    if (index !== -1) {
+      entity.removeSystem(this);
+      this.entities.splice(index, 1);
+
+      this.exit(entity);
+    }
+  }
+  /**
+   * Apply update to each entity of this system.
+   *
+   * @method  updateAll
+   */
+  updateAll(elapsed) {
+    this.preUpdate();
+
+    for (let i = 0, entity; entity = this.entities[i]; i += 1) {
+      this.update(entity, elapsed);
+    }
+
+    this.postUpdate();
+  }
+  /**
+   * dispose the system by exiting all the entities
+   *
+   * @method  dispose
+   */
+  dispose() {
+    for (let i = 0, entity; entity = this.entities[i]; i += 1) {
+      entity.removeSystem(this);
+      this.exit(entity);
+    }
+  }
+  // methods to be extended by subclasses
+  /**
+   * Abstract method to subclass. Called once per update, before entities
+   * iteration.
+   *
+   * @method  preUpdate
+   */
+  preUpdate() {}
+  /**
+   * Abstract method to subclass. Called once per update, after entities
+   * iteration.
+   *
+   * @method  postUpdate
+   */
+  postUpdate() {}
+  /**
+   * Abstract method to subclass. Should return true if the entity is eligible
+   * to the system, false otherwise.
+   *
+   * @method  test
+   * @param  {Entity} entity The entity to test.
+   */
+  test(entity) {
+    return false;
+  }
+  /**
+   * Abstract method to subclass. Called when an entity is added to the system.
+   *
+   * @method  enter
+   * @param  {Entity} entity The added entity.
+   */
+  enter(entity) {}
+  /**
+   * Abstract method to subclass. Called when an entity is removed from the system.
+   *
+   * @method  exit
+   * @param  {Entity} entity The removed entity.
+   */
+  exit(entity) {}
+  /**
+   * Abstract method to subclass. Called for each entity to update. This is
+   * the only method that should actual mutate entity state.
+   *
+   * @method  update
+   * @param  {Entity} entity The entity to update.
+   */
+  update(entity) {}
+}
+// jshint unused:true
+
+export default System;
+
+    </pre>
+</div>
                     </div>
                 </div>
             </div>
